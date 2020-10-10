@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>70917760931-nthr9bkl8069990mum6hhdh19ug2cthe.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.70917760931-nthr9bkl8069990mum6hhdh19ug2cthe</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBm0PLgxmnbkm4e-ihE2JpJnJaxvw3UJGs</string>
+	<key>GCM_SENDER_ID</key>
+	<string>70917760931</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>RT.Smart-Expence-Tracker</string>
+	<key>PROJECT_ID</key>
+	<string>smart-expence-tracker-1b99d</string>
+	<key>STORAGE_BUCKET</key>
+	<string>smart-expence-tracker-1b99d.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:70917760931:ios:b11edf35ba365364d3dc16</string>
+	<key>DATABASE_URL</key>
+	<string>https://smart-expence-tracker-1b99d.firebaseio.com</string>
+</dict>
+</plist>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExtraSpentTableViewCell" rowHeight="86" id="KGk-i7-Jjw" customClass="ExtraSpentTableViewCell" customModule="Smart_Expence_Tracker" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="318" height="104"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="318" height="104"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TV 55&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7aq-bA-bK2">
+                        <rect key="frame" x="20" y="40" width="52" height="20"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$894" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ih5-yq-Day">
+                        <rect key="frame" x="264" y="40" width="38" height="18"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="03/06/2019" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hvz-bH-68j">
+                        <rect key="frame" x="215" y="64" width="87" height="20"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" red="0.25863483549999999" green="0.59611552950000002" blue="0.69402879480000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="ih5-yq-Day" secondAttribute="trailing" constant="16" id="2nO-Bw-hkS"/>
+                    <constraint firstAttribute="bottom" secondItem="Hvz-bH-68j" secondAttribute="bottom" constant="20" id="7rH-xA-4BQ"/>
+                    <constraint firstItem="7aq-bA-bK2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="DML-Lx-16I"/>
+                    <constraint firstItem="ih5-yq-Day" firstAttribute="trailing" secondItem="Hvz-bH-68j" secondAttribute="trailing" id="Ubd-yn-nxX"/>
+                    <constraint firstItem="ih5-yq-Day" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="40" id="ZIb-bH-Ovu"/>
+                    <constraint firstItem="7aq-bA-bK2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="40" id="f0e-Ih-aKs"/>
+                    <constraint firstItem="Hvz-bH-68j" firstAttribute="top" secondItem="ih5-yq-Day" secondAttribute="bottom" constant="6" id="pGu-gp-N9D"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="dateOutlet" destination="Hvz-bH-68j" id="pHE-dW-b3b"/>
+                <outlet property="nameOutlet" destination="7aq-bA-bK2" id="YbA-KT-Ynw"/>
+                <outlet property="priceOutlet" destination="ih5-yq-Day" id="7tD-YJ-Z2a"/>
+            </connections>
+            <point key="canvasLocation" x="-1" y="-46"/>
+        </tableViewCell>
+    </objects>
+</document>
