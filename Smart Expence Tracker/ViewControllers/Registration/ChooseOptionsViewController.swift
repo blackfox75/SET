@@ -17,7 +17,7 @@ class ChooseOptionsViewController: UIViewController, LoginButtonDelegate {
     //MARK: - Outlets
 
     @IBOutlet weak var googleSignInButtonOutlet: UIButton!
-    @IBOutlet weak var facebookSignInButtonOutlet: UIButton!
+
     @IBOutlet weak var appleSignInButton: UIButton!
     
     //MARK: - Actions
@@ -30,15 +30,6 @@ class ChooseOptionsViewController: UIViewController, LoginButtonDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-//        if let token = AccessToken.current,!token.isExpired {
-//            let token = token.tokenString
-//
-//            let request = FBSDKLoginKit.GraphRequest(graphPath: "me", parameters: ["fields":"email,name"], tokenString: token, version: nil, httpMethod: .get)
-//            request.start(completionHandler: { conection, result, error in
-//                print("\(result)")
-//            })
-//        } else {
         let facebookLoginButton = FBLoginButton()
         facebookLoginButton.center = view.center
         
@@ -61,29 +52,10 @@ class ChooseOptionsViewController: UIViewController, LoginButtonDelegate {
         facebookLoginButton.titleLabel?.text = "Sign In with Facebook"
         
         facebookLoginButton.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 20)
-//        }
-        
-        
         
         googleSignInButtonOutlet.imageEdgeInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         GIDSignIn.sharedInstance()?.presentingViewController = self
         
-        
-        
-        // Check for user already signIn or not
-//        guard let signIn = GIDSignIn.sharedInstance() else { return }
-//        if (signIn.hasPreviousSignIn()) {
-//          signIn.restorePreviousSignIn()
-//
-//          // If you ever changed the client ID you use for Google Sign-in, or
-//          // requested a different set of scopes, then also confirm that they
-//          // have the values you expect before proceeding.
-////          if (signIn.currentUser.authentication.clientID != "70917760931-nthr9bkl8069990mum6hhdh19ug2cthe.apps.googleusercontent.com") {
-////            signIn.signOut()
-////          }
-//        }
-        
-//        GIDSignIn.sharedInstance()?.restorePreviousSignIn()
     }
     
     
@@ -93,15 +65,12 @@ class ChooseOptionsViewController: UIViewController, LoginButtonDelegate {
         let request = FBSDKLoginKit.GraphRequest(graphPath: "me", parameters: ["fields":"email,name"], tokenString: token, version: nil, httpMethod: .get)
         request.start(completionHandler: { conection, result, error in
             print("\(result)")
+            let collectInformationvc = UIViewController.getFromStoryboard(withId: "CollectInformationViewController") as! CollectInformationViewController
+            self.navigationController?.pushViewController(collectInformationvc, animated: true)
         })
     }
     
     func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
-        
-    }
-    
-    
-    @IBAction func facebookButtonClicked(_ sender: Any) {
         
     }
     
