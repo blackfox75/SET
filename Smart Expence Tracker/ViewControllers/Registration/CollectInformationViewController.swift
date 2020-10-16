@@ -14,5 +14,13 @@ class CollectInformationViewController: UIViewController {
         
     }
 
-
+    @IBAction func startNowClicked(_ sender: Any) {
+        let jobsVC = UIViewController.getFromStoryboard(withId: "jobsQuestionViewController") as! JobsQuestionViewController
+        navigationController?.pushViewController(jobsVC, animated: true)
+    }
+    
+    @IBAction func backButtonClicked(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
 }

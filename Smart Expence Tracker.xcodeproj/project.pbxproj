@@ -22,6 +22,7 @@
 		22419CA52516B786009C237A /* ChooseOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22419CA42516B786009C237A /* ChooseOptionsViewController.swift */; };
 		22419CA82516B836009C237A /* FunctionForViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22419CA72516B836009C237A /* FunctionForViewControllers.swift */; };
 		22628A85251EC03100CB8356 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22628A84251EC03100CB8356 /* MainViewController.swift */; };
+		226700782533F1120007A563 /* SignInEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226700772533F1120007A563 /* SignInEmailViewController.swift */; };
 		2295E58B252A452B00D51A91 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2295E58A252A452B00D51A91 /* MainTabBarController.swift */; };
 		2295E58E252A5A1C00D51A91 /* ExtraSpentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2295E58D252A5A1C00D51A91 /* ExtraSpentViewController.swift */; };
 		2295E591252A952700D51A91 /* PlanListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2295E590252A952700D51A91 /* PlanListViewController.swift */; };
@@ -65,6 +66,7 @@
 		22419CA42516B786009C237A /* ChooseOptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseOptionsViewController.swift; sourceTree = "<group>"; };
 		22419CA72516B836009C237A /* FunctionForViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionForViewControllers.swift; sourceTree = "<group>"; };
 		22628A84251EC03100CB8356 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		226700772533F1120007A563 /* SignInEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInEmailViewController.swift; sourceTree = "<group>"; };
 		2295E58A252A452B00D51A91 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		2295E58D252A5A1C00D51A91 /* ExtraSpentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraSpentViewController.swift; sourceTree = "<group>"; };
 		2295E590252A952700D51A91 /* PlanListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanListViewController.swift; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 			children = (
 				22419CA12516B456009C237A /* WelcomeViewController.swift */,
 				22419CA42516B786009C237A /* ChooseOptionsViewController.swift */,
+				226700772533F1120007A563 /* SignInEmailViewController.swift */,
 				2295E58A252A452B00D51A91 /* MainTabBarController.swift */,
 				22FCC23C2517D6AC00B69150 /* CollectInformationViewController.swift */,
 				22FCC23F2519534600B69150 /* JobsQuestionViewController.swift */,
@@ -403,6 +406,7 @@
 				2295E58B252A452B00D51A91 /* MainTabBarController.swift in Sources */,
 				22236B4E25267C6F006488C9 /* ExtraSpentTableViewCell.swift in Sources */,
 				22D5474F251FAAE2004118CB /* YourMoneyViewController.swift in Sources */,
+				226700782533F1120007A563 /* SignInEmailViewController.swift in Sources */,
 				22D547922523FFF2004118CB /* ChangePlanListViewController.swift in Sources */,
 				22D547812523EAD3004118CB /* ChangeMounthlySpentViewController.swift in Sources */,
 				22628A85251EC03100CB8356 /* MainViewController.swift in Sources */,

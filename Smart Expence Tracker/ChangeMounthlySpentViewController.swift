@@ -9,10 +9,16 @@ import UIKit
 
 class ChangeMounthlySpentViewController: UIViewController {
 
+    @IBOutlet weak var mounthlySpentTitleOutlet: UITextField!
+    @IBOutlet weak var mounthlySpentPriceOutlet: UITextField!
+    @IBOutlet weak var saveButtonOutlet: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        mounthlySpentTitleOutlet.attributedPlaceholder = NSAttributedString(string:"Name", attributes:[NSAttributedString.Key.foregroundColor: UIColor.white])
+        mounthlySpentPriceOutlet.attributedPlaceholder = NSAttributedString(string:"Price", attributes:[NSAttributedString.Key.foregroundColor: UIColor.white])
+        saveButtonOutlet.layer.cornerRadius = 20
+        
     }
     
 

@@ -9,10 +9,17 @@ import UIKit
 
 class ChangeJobsViewController: UIViewController {
 
+    @IBOutlet weak var jobTitleOutlet: UITextField!
+    @IBOutlet weak var jobSalaryOutlet: UITextField!
+    @IBOutlet weak var saveButtonOutlet: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        jobTitleOutlet.attributedPlaceholder = NSAttributedString(string:"Name of the job", attributes:[NSAttributedString.Key.foregroundColor: UIColor.white])
+        jobSalaryOutlet.attributedPlaceholder = NSAttributedString(string:"Salary", attributes:[NSAttributedString.Key.foregroundColor: UIColor.white])
+        saveButtonOutlet.layer.cornerRadius = 20
+        
     }
     
 

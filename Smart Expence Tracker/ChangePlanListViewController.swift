@@ -9,10 +9,16 @@ import UIKit
 
 class ChangePlanListViewController: UIViewController {
 
+    @IBOutlet weak var titleOutlet: UITextField!
+    @IBOutlet weak var priceOutlet: UITextField!
+    @IBOutlet weak var saveButtonOutlet: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        titleOutlet.attributedPlaceholder = NSAttributedString(string:"Name", attributes:[NSAttributedString.Key.foregroundColor: UIColor.white])
+        priceOutlet.attributedPlaceholder = NSAttributedString(string:"Price", attributes:[NSAttributedString.Key.foregroundColor: UIColor.white])
+        saveButtonOutlet.layer.cornerRadius = 20
     }
     
 

@@ -10,15 +10,14 @@ import Firebase
 import GoogleSignIn
 import FBSDKCoreKit
 
-@main class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
+@main class AppDelegate: UIResponder, UIApplicationDelegate , GIDSignInDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
         // Override point for customization after application launch.
-        GIDSignIn.sharedInstance()?.delegate = self
+//        GIDSignIn.sharedInstance()?.delegate = self
         GIDSignIn.sharedInstance()?.clientID = "70917760931-nthr9bkl8069990mum6hhdh19ug2cthe.apps.googleusercontent.com"
         ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
-        
         return true
     }
     
@@ -26,8 +25,10 @@ import FBSDKCoreKit
         if (error == nil) {
               // Perform any operations on signed in user here.
             print(user.profile.email!)
+           
             print("Error:", error.debugDescription)
             } else {
+
               print("\(error.localizedDescription)")
             }
 //                print("User email: \(user.profile.email ?? "No Email")")

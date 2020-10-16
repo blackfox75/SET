@@ -9,10 +9,17 @@ import UIKit
 
 class ChangeDebitCardsViewController: UIViewController {
 
+    @IBOutlet weak var titleOutlet: UITextField!
+    @IBOutlet weak var moneyOutlet: UITextField!
+    @IBOutlet weak var saveButtonOutlet: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        titleOutlet.attributedPlaceholder = NSAttributedString(string:"Name", attributes:[NSAttributedString.Key.foregroundColor: UIColor.white])
+        moneyOutlet.attributedPlaceholder = NSAttributedString(string:"Money on debit card", attributes:[NSAttributedString.Key.foregroundColor: UIColor.white])
+        saveButtonOutlet.layer.cornerRadius = 20
+        
     }
     
 

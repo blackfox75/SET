@@ -11,6 +11,7 @@ import Firebase
 import FBSDKLoginKit
 
 class ChooseOptionsViewController: UIViewController, LoginButtonDelegate {
+    
  
     
 
@@ -24,8 +25,15 @@ class ChooseOptionsViewController: UIViewController, LoginButtonDelegate {
     
   
     @IBAction func googleSignInButton(_ sender: Any) {
-        GIDSignIn.sharedInstance().signIn()
+        if GIDSignIn.sharedInstance()?.currentUser != nil {
+            let collectInformationvc = UIViewController.getFromStoryboard(withId: "CollectInformationViewController") as! CollectInformationViewController
+            navigationController?.pushViewController(collectInformationvc, animated: true)
+        } else {
+            GIDSignIn.sharedInstance().signIn()
+        }
+            
     }
+    
     //MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +64,8 @@ class ChooseOptionsViewController: UIViewController, LoginButtonDelegate {
         googleSignInButtonOutlet.imageEdgeInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         GIDSignIn.sharedInstance()?.presentingViewController = self
         
+        
+        
     }
     
     
@@ -65,8 +75,10 @@ class ChooseOptionsViewController: UIViewController, LoginButtonDelegate {
         let request = FBSDKLoginKit.GraphRequest(graphPath: "me", parameters: ["fields":"email,name"], tokenString: token, version: nil, httpMethod: .get)
         request.start(completionHandler: { conection, result, error in
             print("\(result)")
-            let collectInformationvc = UIViewController.getFromStoryboard(withId: "CollectInformationViewController") as! CollectInformationViewController
-            self.navigationController?.pushViewController(collectInformationvc, animated: true)
+            if result != nil {
+                let collectInformationvc = UIViewController.getFromStoryboard(withId: "CollectInformationViewController") as! CollectInformationViewController
+                self.navigationController?.pushViewController(collectInformationvc, animated: true)
+            }
         })
     }
     
@@ -74,6 +86,10 @@ class ChooseOptionsViewController: UIViewController, LoginButtonDelegate {
         
     }
     
+    
+    @IBAction func signInWithEmailClicked(_ sender: Any) {
+        
+    }
     
 
 }
