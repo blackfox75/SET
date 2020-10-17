@@ -22,24 +22,23 @@ import FBSDKCoreKit
     }
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        //try
+        let defaults = UserDefaults.standard
+        defaults.set(user.profile.email, forKey: "Email")
+        defaults.set(user.profile.name, forKey: "Name")
+//        print("\(defaults.value(forKeyPath: "Email"))-one")
+//        print("\(defaults.value(forKey: "Name"))-two")
+        //try
+        
         if (error == nil) {
               // Perform any operations on signed in user here.
             print(user.profile.email!)
             print("Error:", error.debugDescription)
-            
-            
-            //try
         guard let authentication = user.authentication else { return }
            let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
                                                           accessToken: authentication.accessToken)
-        
-
            NotificationCenter.default.post(
                name: Notification.Name("SuccessfulSignInNotification"), object: nil, userInfo: nil)
-            //try
-        
-            
-            
             } else {
 
               print("\(error.localizedDescription)")

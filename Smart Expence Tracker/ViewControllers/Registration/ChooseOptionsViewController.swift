@@ -12,9 +12,6 @@ import FBSDKLoginKit
 
 class ChooseOptionsViewController: UIViewController, LoginButtonDelegate {
     
- 
-    
-
     //MARK: - Outlets
 
     @IBOutlet weak var googleSignInButtonOutlet: UIButton!
@@ -32,10 +29,7 @@ class ChooseOptionsViewController: UIViewController, LoginButtonDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        //try
-            NotificationCenter.default.addObserver(self, selector: #selector(didSignIn), name: NSNotification.Name("SuccessfulSignInNotification"), object: nil)
-        //try
+        NotificationCenter.default.addObserver(self, selector: #selector(didSignIn), name: NSNotification.Name("SuccessfulSignInNotification"), object: nil)
         
         
         let facebookLoginButton = FBLoginButton()
@@ -86,7 +80,6 @@ class ChooseOptionsViewController: UIViewController, LoginButtonDelegate {
         
     }
 
-    //try
     @objc func didSignIn()  {
 
         // Add your code here to push the new view controller
@@ -98,11 +91,11 @@ class ChooseOptionsViewController: UIViewController, LoginButtonDelegate {
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
-    //try
     
     
     @IBAction func signInWithEmailClicked(_ sender: Any) {
-        
+        let vc = UIViewController.getFromStoryboard(withId: "SignInEmailViewController") as! SignInEmailViewController
+        navigationController?.pushViewController(vc, animated: true)
     }
     
 
