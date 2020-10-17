@@ -15,7 +15,7 @@ import FBSDKCoreKit
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
         // Override point for customization after application launch.
-//        GIDSignIn.sharedInstance()?.delegate = self
+        GIDSignIn.sharedInstance()?.delegate = self
         GIDSignIn.sharedInstance()?.clientID = "70917760931-nthr9bkl8069990mum6hhdh19ug2cthe.apps.googleusercontent.com"
         ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
         return true
@@ -25,8 +25,21 @@ import FBSDKCoreKit
         if (error == nil) {
               // Perform any operations on signed in user here.
             print(user.profile.email!)
-           
             print("Error:", error.debugDescription)
+            
+            
+            //try
+        guard let authentication = user.authentication else { return }
+           let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
+                                                          accessToken: authentication.accessToken)
+        
+
+           NotificationCenter.default.post(
+               name: Notification.Name("SuccessfulSignInNotification"), object: nil, userInfo: nil)
+            //try
+        
+            
+            
             } else {
 
               print("\(error.localizedDescription)")

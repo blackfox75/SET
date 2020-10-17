@@ -9,21 +9,27 @@ import UIKit
 
 class JobsQuestionViewController: UIViewController {
 
+    @IBOutlet weak var firstQuestionTextOutlet: UILabel!
+    @IBOutlet weak var secondQuestionTextOutlet: UILabel!
+    @IBOutlet weak var firsttextFieldOutlet: UITextField!
+    @IBOutlet weak var secondTextFieldOutlet: UITextField!
+    @IBOutlet weak var thirdTextFieldOutlet: UITextField!
+    @IBOutlet weak var congratulationsMessageOutlet: UILabel!
+    @IBOutlet weak var circleImageOutlet: UIImageView!
+    @IBOutlet weak var buttonTextOutlet: UILabel!
+    @IBOutlet weak var circleView: UIView!
+    @IBOutlet weak var cirlceButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        cirlceButton.layer.cornerRadius = 20
+        circleView.layer.cornerRadius = 20
+        firstQuestionTextOutlet.text = "How many jobs do you have?"
+        firsttextFieldOutlet.isHidden = false
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func nextButtonClicked(_ sender: Any) {
+        
     }
-    */
-
+    
 }

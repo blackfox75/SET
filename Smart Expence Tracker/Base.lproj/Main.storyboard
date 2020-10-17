@@ -85,7 +85,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iUs-4G-mAV">
-                                <rect key="frame" x="20" y="51" width="12.666666666666664" height="18.666666666666671"/>
+                                <rect key="frame" x="20" y="51" width="15" height="21.333333333333329"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="fyA-pq-y4v"/>
+                                    <constraint firstAttribute="width" constant="15" id="pYa-2S-1rE"/>
+                                </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" backgroundImage="chevron.backward" catalog="system">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -220,11 +224,6 @@
                                     <constraint firstAttribute="width" constant="26" id="IAY-E9-z9O"/>
                                 </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3iz-sS-U27" customClass="GIDSignInButton">
-                                <rect key="frame" x="43" y="650" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="K9e-fG-CPi"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -359,10 +358,14 @@ Answer a few questions, and Smart Expences Tracker will better help you track yo
                                     <constraint firstAttribute="trailing" secondItem="LaB-pC-Xt7" secondAttribute="trailing" id="xDL-WJ-WWf"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nK9-iE-b88">
-                                <rect key="frame" x="20" y="44" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nK9-iE-b88">
+                                <rect key="frame" x="20" y="46" width="15" height="21.333333333333329"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="ESm-jf-owk"/>
+                                    <constraint firstAttribute="width" constant="15" id="RFH-6B-ldj"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" backgroundImage="chevron.backward" catalog="system"/>
                                 <connections>
                                     <action selector="backButtonClicked:" destination="rtl-mo-ixH" eventType="touchUpInside" id="46c-KO-VdL"/>
                                 </connections>
@@ -375,9 +378,11 @@ Answer a few questions, and Smart Expences Tracker will better help you track yo
                             <constraint firstItem="PaJ-oi-vxx" firstAttribute="leading" secondItem="A98-y0-beM" secondAttribute="leading" constant="20" id="Fr9-6Q-NUm"/>
                             <constraint firstItem="M1O-HD-XAe" firstAttribute="centerY" secondItem="GwT-AV-AzM" secondAttribute="centerY" constant="-100" id="Jc5-eq-EPp"/>
                             <constraint firstItem="A98-y0-beM" firstAttribute="trailing" secondItem="PaJ-oi-vxx" secondAttribute="trailing" constant="20" id="JrP-uZ-Pqe"/>
+                            <constraint firstItem="nK9-iE-b88" firstAttribute="top" secondItem="A98-y0-beM" secondAttribute="top" id="TPJ-l3-gTZ"/>
                             <constraint firstItem="M1O-HD-XAe" firstAttribute="centerX" secondItem="GwT-AV-AzM" secondAttribute="centerX" id="ZOI-gI-S7R"/>
                             <constraint firstItem="A98-y0-beM" firstAttribute="trailing" secondItem="aoa-kL-sDJ" secondAttribute="trailing" constant="20" id="cvc-Hw-3Kb"/>
                             <constraint firstItem="PaJ-oi-vxx" firstAttribute="top" secondItem="aoa-kL-sDJ" secondAttribute="bottom" constant="50" id="vt0-W0-2OO"/>
+                            <constraint firstItem="nK9-iE-b88" firstAttribute="leading" secondItem="A98-y0-beM" secondAttribute="leading" constant="20" id="wwd-Wf-OVa"/>
                             <constraint firstItem="aoa-kL-sDJ" firstAttribute="leading" secondItem="A98-y0-beM" secondAttribute="leading" constant="20" id="zhr-sM-gHz"/>
                         </constraints>
                     </view>
@@ -394,22 +399,23 @@ Answer a few questions, and Smart Expences Tracker will better help you track yo
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dtX-yb-K6G">
+                            <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dtX-yb-K6G">
                                 <rect key="frame" x="60" y="404" width="255" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="tGN-D4-e7I"/>
                                 </constraints>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many jobs do you have?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AFc-gH-3uq">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many jobs do you have?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AFc-gH-3uq">
                                 <rect key="frame" x="20" y="328" width="335" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="djn-M9-wsV"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ykF-JV-Wed">
@@ -417,33 +423,42 @@ Answer a few questions, and Smart Expences Tracker will better help you track yo
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lYg-Qn-102">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="60"/>
-                                        <state key="normal" backgroundImage="background"/>
+                                        <color key="backgroundColor" red="0.070588235289999995" green="0.25490196079999999" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                        <state key="normal" title="Next">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="nextButtonClicked:" destination="zFN-s6-fKb" eventType="touchUpInside" id="GWm-5p-wjb"/>
+                                        </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Next" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lTE-F6-tjT">
-                                        <rect key="frame" x="146.66666666666666" y="18.666666666666629" width="42" height="22.666666666666671"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lTE-F6-tjT">
+                                        <rect key="frame" x="167.66666666666666" y="18.666666666666629" width="0.0" height="22.666666666666671"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="downloadCirculetwo" translatesAutoresizingMaskIntoConstraints="NO" id="rSC-y8-3A9">
-                                        <rect key="frame" x="4" y="4" width="50" height="50"/>
+                                        <rect key="frame" x="4" y="10" width="40" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="Kov-d2-roe"/>
-                                            <constraint firstAttribute="height" constant="50" id="v4P-t6-0IG"/>
+                                            <constraint firstAttribute="width" constant="40" id="Kov-d2-roe"/>
+                                            <constraint firstAttribute="height" constant="40" id="v4P-t6-0IG"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="rSC-y8-3A9" firstAttribute="leading" secondItem="ykF-JV-Wed" secondAttribute="leading" constant="4" id="DAe-be-ZQw"/>
+                                    <constraint firstItem="rSC-y8-3A9" firstAttribute="leading" secondItem="ykF-JV-Wed" secondAttribute="leading" constant="4" id="HEV-RE-yLk"/>
                                     <constraint firstAttribute="height" constant="60" id="IZz-GI-9VK"/>
                                     <constraint firstAttribute="bottom" secondItem="lYg-Qn-102" secondAttribute="bottom" id="Q0Z-hL-cOY"/>
                                     <constraint firstItem="lTE-F6-tjT" firstAttribute="centerX" secondItem="ykF-JV-Wed" secondAttribute="centerX" id="XYL-vZ-bRd"/>
                                     <constraint firstItem="lYg-Qn-102" firstAttribute="leading" secondItem="ykF-JV-Wed" secondAttribute="leading" id="Zd2-9d-7Z9"/>
+                                    <constraint firstItem="rSC-y8-3A9" firstAttribute="centerY" secondItem="ykF-JV-Wed" secondAttribute="centerY" id="aio-5V-uzR"/>
                                     <constraint firstItem="lTE-F6-tjT" firstAttribute="centerY" secondItem="lYg-Qn-102" secondAttribute="centerY" id="eJk-a2-zaD"/>
                                     <constraint firstItem="lTE-F6-tjT" firstAttribute="top" secondItem="ykF-JV-Wed" secondAttribute="top" constant="18.666666666666629" id="fmO-cW-3tH"/>
                                     <constraint firstAttribute="trailing" secondItem="lYg-Qn-102" secondAttribute="trailing" id="fwv-lA-dQ2"/>
-                                    <constraint firstItem="rSC-y8-3A9" firstAttribute="top" secondItem="ykF-JV-Wed" secondAttribute="top" constant="4" id="jzS-M9-8Ot"/>
+                                    <constraint firstItem="rSC-y8-3A9" firstAttribute="top" secondItem="ykF-JV-Wed" secondAttribute="top" constant="10" id="rpN-yH-L0R"/>
+                                    <constraint firstAttribute="bottom" secondItem="rSC-y8-3A9" secondAttribute="bottom" constant="10" id="vla-da-E7M"/>
                                     <constraint firstItem="lTE-F6-tjT" firstAttribute="centerY" secondItem="ykF-JV-Wed" secondAttribute="centerY" id="xCV-Qb-gN6"/>
                                 </constraints>
                             </view>
@@ -456,13 +471,13 @@ Answer a few questions, and Smart Expences Tracker will better help you track yo
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lW9-uw-MQ3">
+                            <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lW9-uw-MQ3">
                                 <rect key="frame" x="60" y="224" width="255" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="wtO-do-D3d"/>
                                 </constraints>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -517,6 +532,18 @@ Expenses Tracker for you!</string>
                             <constraint firstItem="kKs-fg-8lV" firstAttribute="trailing" secondItem="D22-EA-cj8" secondAttribute="trailing" constant="60" id="zpC-tG-xu5"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="buttonTextOutlet" destination="lTE-F6-tjT" id="udQ-9H-jIu"/>
+                        <outlet property="circleImageOutlet" destination="rSC-y8-3A9" id="y9H-6z-1VO"/>
+                        <outlet property="circleView" destination="ykF-JV-Wed" id="jim-WP-2p8"/>
+                        <outlet property="cirlceButton" destination="lYg-Qn-102" id="2ur-a9-X8e"/>
+                        <outlet property="congratulationsMessageOutlet" destination="gMV-hZ-QVP" id="Erg-tg-0UB"/>
+                        <outlet property="firstQuestionTextOutlet" destination="c6Y-Ps-TAb" id="X6X-il-OgW"/>
+                        <outlet property="firsttextFieldOutlet" destination="lW9-uw-MQ3" id="yMK-zM-YHm"/>
+                        <outlet property="secondQuestionTextOutlet" destination="AFc-gH-3uq" id="TJN-1O-GC8"/>
+                        <outlet property="secondTextFieldOutlet" destination="D22-EA-cj8" id="2K3-ip-1MY"/>
+                        <outlet property="thirdTextFieldOutlet" destination="dtX-yb-K6G" id="0IR-Ul-zj1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dQu-ls-SR5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

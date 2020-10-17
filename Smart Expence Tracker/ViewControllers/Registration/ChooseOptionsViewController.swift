@@ -18,25 +18,25 @@ class ChooseOptionsViewController: UIViewController, LoginButtonDelegate {
     //MARK: - Outlets
 
     @IBOutlet weak var googleSignInButtonOutlet: UIButton!
-
     @IBOutlet weak var appleSignInButton: UIButton!
     
     //MARK: - Actions
     
   
     @IBAction func googleSignInButton(_ sender: Any) {
-        if GIDSignIn.sharedInstance()?.currentUser != nil {
-            let collectInformationvc = UIViewController.getFromStoryboard(withId: "CollectInformationViewController") as! CollectInformationViewController
-            navigationController?.pushViewController(collectInformationvc, animated: true)
-        } else {
             GIDSignIn.sharedInstance().signIn()
-        }
             
     }
     
     //MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        //try
+            NotificationCenter.default.addObserver(self, selector: #selector(didSignIn), name: NSNotification.Name("SuccessfulSignInNotification"), object: nil)
+        //try
+        
         
         let facebookLoginButton = FBLoginButton()
         facebookLoginButton.center = view.center
@@ -85,6 +85,20 @@ class ChooseOptionsViewController: UIViewController, LoginButtonDelegate {
     func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
         
     }
+
+    //try
+    @objc func didSignIn()  {
+
+        // Add your code here to push the new view controller
+        let vc = UIViewController.getFromStoryboard(withId: "CollectInformationViewController") as! CollectInformationViewController
+      navigationController?.pushViewController(vc, animated: true)
+
+    }
+
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    //try
     
     
     @IBAction func signInWithEmailClicked(_ sender: Any) {
