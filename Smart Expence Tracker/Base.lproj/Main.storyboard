@@ -539,7 +539,7 @@ Expenses Tracker for you!</string>
                         <outlet property="cirlceButton" destination="lYg-Qn-102" id="2ur-a9-X8e"/>
                         <outlet property="congratulationsMessageOutlet" destination="gMV-hZ-QVP" id="Erg-tg-0UB"/>
                         <outlet property="firstQuestionTextOutlet" destination="c6Y-Ps-TAb" id="X6X-il-OgW"/>
-                        <outlet property="firsttextFieldOutlet" destination="lW9-uw-MQ3" id="yMK-zM-YHm"/>
+                        <outlet property="firstTextFieldOutlet" destination="lW9-uw-MQ3" id="yMK-zM-YHm"/>
                         <outlet property="secondQuestionTextOutlet" destination="AFc-gH-3uq" id="TJN-1O-GC8"/>
                         <outlet property="secondTextFieldOutlet" destination="D22-EA-cj8" id="2K3-ip-1MY"/>
                         <outlet property="thirdTextFieldOutlet" destination="dtX-yb-K6G" id="0IR-Ul-zj1"/>

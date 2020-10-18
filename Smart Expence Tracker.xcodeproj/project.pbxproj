@@ -23,6 +23,8 @@
 		22419CA82516B836009C237A /* FunctionForViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22419CA72516B836009C237A /* FunctionForViewControllers.swift */; };
 		22628A85251EC03100CB8356 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22628A84251EC03100CB8356 /* MainViewController.swift */; };
 		226700782533F1120007A563 /* SignInEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226700772533F1120007A563 /* SignInEmailViewController.swift */; };
+		226CAFAA253BA545002D773C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226CAFA9253BA545002D773C /* User.swift */; };
+		226CAFB3253BAA78002D773C /* userState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226CAFB2253BAA78002D773C /* userState.swift */; };
 		2295E58B252A452B00D51A91 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2295E58A252A452B00D51A91 /* MainTabBarController.swift */; };
 		2295E58E252A5A1C00D51A91 /* ExtraSpentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2295E58D252A5A1C00D51A91 /* ExtraSpentViewController.swift */; };
 		2295E591252A952700D51A91 /* PlanListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2295E590252A952700D51A91 /* PlanListViewController.swift */; };
@@ -67,6 +69,8 @@
 		22419CA72516B836009C237A /* FunctionForViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionForViewControllers.swift; sourceTree = "<group>"; };
 		22628A84251EC03100CB8356 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		226700772533F1120007A563 /* SignInEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInEmailViewController.swift; sourceTree = "<group>"; };
+		226CAFA9253BA545002D773C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		226CAFB2253BAA78002D773C /* userState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userState.swift; sourceTree = "<group>"; };
 		2295E58A252A452B00D51A91 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		2295E58D252A5A1C00D51A91 /* ExtraSpentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraSpentViewController.swift; sourceTree = "<group>"; };
 		2295E590252A952700D51A91 /* PlanListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanListViewController.swift; sourceTree = "<group>"; };
@@ -168,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				22C82DFE2524E75500851F79 /* Enums.swift */,
+				226CAFB2253BAA78002D773C /* userState.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -192,6 +197,7 @@
 		22D547862523FE33004118CB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				226CAFA9253BA545002D773C /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -398,11 +404,13 @@
 				22D547662522B6A1004118CB /* ProfileViewController.swift in Sources */,
 				22FCC23D2517D6AC00B69150 /* CollectInformationViewController.swift in Sources */,
 				22C82DFF2524E75500851F79 /* Enums.swift in Sources */,
+				226CAFB3253BAA78002D773C /* userState.swift in Sources */,
 				22419CA82516B836009C237A /* FunctionForViewControllers.swift in Sources */,
 				22419C8A25169D72009C237A /* AppDelegate.swift in Sources */,
 				22C82E022524E81F00851F79 /* SelectedSettingsViewController.swift in Sources */,
 				22419C8C25169D72009C237A /* SceneDelegate.swift in Sources */,
 				2295E591252A952700D51A91 /* PlanListViewController.swift in Sources */,
+				226CAFAA253BA545002D773C /* User.swift in Sources */,
 				2295E58B252A452B00D51A91 /* MainTabBarController.swift in Sources */,
 				22236B4E25267C6F006488C9 /* ExtraSpentTableViewCell.swift in Sources */,
 				22D5474F251FAAE2004118CB /* YourMoneyViewController.swift in Sources */,

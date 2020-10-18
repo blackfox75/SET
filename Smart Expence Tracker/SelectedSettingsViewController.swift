@@ -53,7 +53,6 @@ extension SelectedSettingsViewController : UITableViewDataSource, UITableViewDel
             let cell = tableView.dequeueReusableCell(withIdentifier: jobsCell, for: indexPath) as! JobsTableViewCell
             cell.jobsTitleOutlet.text = "Warehouse"
             cell.priceTitleOutlet.text = "$2342"
-//            tableView.rowHeight = 90
             return cell
         case .mountlySpent:
             let cell = tableView.dequeueReusableCell(withIdentifier: mounthlySpent, for: indexPath) as! MounthlySpentTableViewCell
