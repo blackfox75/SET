@@ -28,7 +28,9 @@ class JobsQuestionViewController: UIViewController {
     var state:String = "countOfJobs"
     var countJobs:Int = 1
     var countCards: Int = 1
-    
+    //new
+    private var datePicker : UIDatePicker?
+    //new
     override func viewDidLoad() {
         super.viewDidLoad()
         cirlceButton.layer.cornerRadius = 20
@@ -36,6 +38,48 @@ class JobsQuestionViewController: UIViewController {
         
         firstQuestionTextOutlet.text = "How many jobs do you have?"
         firstTextFieldOutlet.isHidden = false
+        
+        
+        //new
+        datePicker = UIDatePicker()
+        datePicker?.preferredDatePickerStyle = .wheels
+        datePicker?.datePickerMode = .date
+        datePicker?.addTarget(self, action: #selector(ChangeExtraSpentViewController.dateChanged(datePicker:)), for: .valueChanged)
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ChangeExtraSpentViewController.viewTapped(gestureRecognizer:)))
+        view.addGestureRecognizer(tapGesture)
+        thirdTextFieldOutlet.inputView = datePicker
+        datePicker?.datePickerMode = .date
+        
+        //NEW
+        
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        
+        let doneBtn = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed))
+        toolbar.setItems([doneBtn], animated: true)
+        thirdTextFieldOutlet.inputAccessoryView = toolbar
+        //new
+    }
+    
+    
+    @objc func donePressed() {
+        
+        let forrmater = DateFormatter()
+        forrmater.dateStyle = .medium
+        forrmater.timeStyle = .none
+        forrmater.dateFormat = "MM/dd/yyyy"
+        thirdTextFieldOutlet.text = forrmater.string(from: datePicker!.date)
+        self.view.endEditing(true)
+    }
+    
+    @objc func viewTapped(gestureRecognizer : UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
+    
+    @objc func dateChanged(datePicker: UIDatePicker) {
+        let dateForrmater = DateFormatter()
+        dateForrmater.dateFormat = "MM/dd/yyyy"
+        thirdTextFieldOutlet.text = dateForrmater.string(from: datePicker.date)
     }
     
     @IBAction func nextButtonClicked(_ sender: Any) {
@@ -65,7 +109,7 @@ class JobsQuestionViewController: UIViewController {
                 jobInfo.name = firstTextFieldOutlet.text!
                 print(firstTextFieldOutlet.text as Any)
                 firstTextFieldOutlet.text = ""
-                firstQuestionTextOutlet.text = "What your mounthly salary at \(String(describing: UserDefaults.standard.object(forKey: "CompanyName") as? String)) job?"
+                firstQuestionTextOutlet.text = "What your mounthly salary at \(String(describing: UserDefaults.standard.object(forKey: "CompanyName") as! String)) job?"
                 userStates = UserState.mounhtlySalary
                 state = "mounthlySalary"
                 countJobs += 1
@@ -127,7 +171,7 @@ class JobsQuestionViewController: UIViewController {
                 userInfo.debitCardName = firstTextFieldOutlet.text!
                 print(firstTextFieldOutlet.text as Any)
                 firstTextFieldOutlet.text = ""
-                firstQuestionTextOutlet.text = "How much money do you have on \(String(describing: UserDefaults.standard.object(forKey: "NameOfDebitCard") as? String)) debit card?"
+                firstQuestionTextOutlet.text = "How much money do you have on \(String(describing: UserDefaults.standard.object(forKey: "NameOfDebitCard") as! String)) debit card?"
                 userStates = UserState.moneyOnDebitcard
                 state = "moneyOnDebitcard"
                 countCards += 1
@@ -140,7 +184,7 @@ class JobsQuestionViewController: UIViewController {
         } else if state == "moneyOnDebitcard" {
             if firstTextFieldOutlet.text != "" {
                 print("MoneyOnDebitcard")
-                defaults.set(firstTextFieldOutlet.text, forKey: "MoneyOnDebitcard")
+                defaults.set(Double(firstTextFieldOutlet.text!), forKey: "MoneyOnDebitcard")
                 defaults.synchronize()
                 userInfo.debitCardAmountOfMoney = Int(firstTextFieldOutlet.text!)!
                 print(firstTextFieldOutlet.text as Any)
@@ -157,7 +201,7 @@ class JobsQuestionViewController: UIViewController {
                     //??????????
                     firstTextFieldOutlet.placeholder = "Name"
                     secondTextFieldOutlet.placeholder = "Price"
-                    thirdTextFieldOutlet.placeholder = "Date"
+                    thirdTextFieldOutlet.placeholder = "Date of your last payment for this spent"
                     addMoreMounthlySpentOutlet.isHidden = false
                     //??????????
                     circleImageOutlet.image = UIImage.init(named: "downloadCirculeSeven")
@@ -180,7 +224,8 @@ class JobsQuestionViewController: UIViewController {
                 
                 userInfo.mounthlySpentName = firstTextFieldOutlet.text!
                 userInfo.mounthlySpentSum = Int(secondTextFieldOutlet.text!)!
-                userInfo.mounthlySpentDate = Date(timeIntervalSinceNow: 2)
+                userInfo.mounthlySpentDate = datePicker!.date
+                
                 print(firstTextFieldOutlet.text as Any)
                 print(secondTextFieldOutlet.text as Any)
                 print(thirdTextFieldOutlet.text as Any)
@@ -224,7 +269,7 @@ class JobsQuestionViewController: UIViewController {
             
             userInfo.mounthlySpentName = firstTextFieldOutlet.text!
             userInfo.mounthlySpentSum = Int(secondTextFieldOutlet.text!)!
-            userInfo.mounthlySpentDate = Date(timeIntervalSinceNow: 2)
+            userInfo.mounthlySpentDate = datePicker!.date
             
             print(firstTextFieldOutlet.text as Any)
             print(secondTextFieldOutlet.text as Any)

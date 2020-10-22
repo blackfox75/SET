@@ -518,6 +518,7 @@ Expenses Tracker for you!</string>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kKs-fg-8lV"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="dtX-yb-K6G" firstAttribute="top" secondItem="D22-EA-cj8" secondAttribute="bottom" constant="50" id="0WE-kn-eV9"/>
                             <constraint firstItem="kKs-fg-8lV" firstAttribute="trailing" secondItem="lW9-uw-MQ3" secondAttribute="trailing" constant="60" id="2dB-FN-a9I"/>
@@ -550,6 +551,9 @@ Expenses Tracker for you!</string>
                             <constraint firstItem="kKs-fg-8lV" firstAttribute="trailing" secondItem="gMV-hZ-QVP" secondAttribute="trailing" constant="15" id="zDH-hu-HNz"/>
                             <constraint firstItem="kKs-fg-8lV" firstAttribute="trailing" secondItem="D22-EA-cj8" secondAttribute="trailing" constant="60" id="zpC-tG-xu5"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Wsj-gH-kC0" appends="YES" id="gN3-0p-9YC"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="addMoreMounthlySpentOutlet" destination="v7R-Zr-tOu" id="RTH-cP-YHP"/>
@@ -567,6 +571,7 @@ Expenses Tracker for you!</string>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dQu-ls-SR5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Wsj-gH-kC0"/>
             </objects>
             <point key="canvasLocation" x="3685.5999999999999" y="101.97044334975369"/>
         </scene>
@@ -665,12 +670,14 @@ Expenses Tracker for you!</string>
                     </view>
                     <navigationItem key="navigationItem" id="TMy-i7-5sa"/>
                     <connections>
+                        <outlet property="moneyDisplayOutlet" destination="Rs4-in-qKG" id="8Kn-Ju-faP"/>
                         <outlet property="moneyViewOutlet" destination="IlV-I5-Bzu" id="npT-jd-FZE"/>
+                        <outlet property="titileForBankOutlet" destination="85v-MH-1e6" id="nW6-Oa-oJR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="acN-rE-okf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6198" y="-1302"/>
+            <point key="canvasLocation" x="6196" y="-1303"/>
         </scene>
         <!--Main Tab Bar Controller-->
         <scene sceneID="pHv-89-pHU">
