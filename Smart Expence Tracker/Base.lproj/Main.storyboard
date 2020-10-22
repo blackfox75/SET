@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kZO-gX-mfN">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -336,7 +336,7 @@ Answer a few questions, and Smart Expences Tracker will better help you track yo
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="downloadCirculeOne" translatesAutoresizingMaskIntoConstraints="NO" id="6rl-Z5-d7E">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="downloadCirculeZero" translatesAutoresizingMaskIntoConstraints="NO" id="6rl-Z5-d7E">
                                         <rect key="frame" x="4" y="4" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="A2g-uO-tMd"/>
@@ -400,7 +400,7 @@ Answer a few questions, and Smart Expences Tracker will better help you track yo
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dtX-yb-K6G">
-                                <rect key="frame" x="60" y="404" width="255" height="40"/>
+                                <rect key="frame" x="60" y="434" width="255" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="tGN-D4-e7I"/>
@@ -410,7 +410,7 @@ Answer a few questions, and Smart Expences Tracker will better help you track yo
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many jobs do you have?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AFc-gH-3uq">
-                                <rect key="frame" x="20" y="328" width="335" height="20"/>
+                                <rect key="frame" x="20" y="358" width="335" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="djn-M9-wsV"/>
                                 </constraints>
@@ -419,7 +419,7 @@ Answer a few questions, and Smart Expences Tracker will better help you track yo
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ykF-JV-Wed">
-                                <rect key="frame" x="20" y="544" width="335" height="60"/>
+                                <rect key="frame" x="20" y="574" width="335" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lYg-Qn-102">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="60"/>
@@ -438,7 +438,7 @@ Answer a few questions, and Smart Expences Tracker will better help you track yo
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="downloadCirculetwo" translatesAutoresizingMaskIntoConstraints="NO" id="rSC-y8-3A9">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="downloadCirculeOne" translatesAutoresizingMaskIntoConstraints="NO" id="rSC-y8-3A9">
                                         <rect key="frame" x="4" y="10" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="Kov-d2-roe"/>
@@ -462,17 +462,17 @@ Answer a few questions, and Smart Expences Tracker will better help you track yo
                                     <constraint firstItem="lTE-F6-tjT" firstAttribute="centerY" secondItem="ykF-JV-Wed" secondAttribute="centerY" id="xCV-Qb-gN6"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many jobs do you have?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c6Y-Ps-TAb">
-                                <rect key="frame" x="20" y="144" width="335" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many jobs do you have?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c6Y-Ps-TAb">
+                                <rect key="frame" x="20" y="94" width="335" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="gfs-LQ-4P3"/>
+                                    <constraint firstAttribute="height" constant="100" id="gfs-LQ-4P3"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lW9-uw-MQ3">
-                                <rect key="frame" x="60" y="224" width="255" height="40"/>
+                                <rect key="frame" x="60" y="254" width="255" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="wtO-do-D3d"/>
@@ -482,7 +482,7 @@ Answer a few questions, and Smart Expences Tracker will better help you track yo
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D22-EA-cj8">
-                                <rect key="frame" x="60" y="314" width="255" height="40"/>
+                                <rect key="frame" x="60" y="344" width="255" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="W9E-Bh-RJ3"/>
@@ -491,16 +491,30 @@ Answer a few questions, and Smart Expences Tracker will better help you track yo
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMV-hZ-QVP">
-                                <rect key="frame" x="15" y="164" width="345" height="220"/>
+                                <rect key="frame" x="15" y="244" width="345" height="170"/>
                                 <string key="text">Congratulations
 
 We are generated
 personal Smart
 Expenses Tracker for you!</string>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
-                                <color key="textColor" red="0.36453783509999999" green="0.6863162518" blue="0.7802934051" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WX6-Nj-WZP">
+                                <rect key="frame" x="20" y="174" width="335" height="70"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v7R-Zr-tOu">
+                                <rect key="frame" x="20" y="489" width="186" height="31"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <state key="normal" title="Add more mounthly spent"/>
+                                <connections>
+                                    <action selector="addMoreMounthlySpent:" destination="zFN-s6-fKb" eventType="touchUpInside" id="KzW-Nm-uDc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kKs-fg-8lV"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -511,33 +525,40 @@ Expenses Tracker for you!</string>
                             <constraint firstItem="gMV-hZ-QVP" firstAttribute="leading" secondItem="kKs-fg-8lV" secondAttribute="leading" constant="15" id="3Iv-Xz-DXd"/>
                             <constraint firstItem="D22-EA-cj8" firstAttribute="leading" secondItem="kKs-fg-8lV" secondAttribute="leading" constant="60" id="4nW-2K-bBd"/>
                             <constraint firstItem="c6Y-Ps-TAb" firstAttribute="leading" secondItem="kKs-fg-8lV" secondAttribute="leading" constant="20" id="5gT-Jf-Joa"/>
-                            <constraint firstItem="gMV-hZ-QVP" firstAttribute="top" secondItem="c6Y-Ps-TAb" secondAttribute="bottom" id="Ecz-A7-trU"/>
+                            <constraint firstItem="gMV-hZ-QVP" firstAttribute="top" secondItem="c6Y-Ps-TAb" secondAttribute="bottom" constant="50" id="Ecz-A7-trU"/>
                             <constraint firstItem="lW9-uw-MQ3" firstAttribute="top" secondItem="c6Y-Ps-TAb" secondAttribute="bottom" constant="60" id="GL5-fO-SsR"/>
+                            <constraint firstItem="kKs-fg-8lV" firstAttribute="trailing" secondItem="WX6-Nj-WZP" secondAttribute="trailing" constant="20" id="GMS-qi-1JF"/>
                             <constraint firstItem="dtX-yb-K6G" firstAttribute="leading" secondItem="D22-EA-cj8" secondAttribute="leading" id="IVg-ND-Nix"/>
+                            <constraint firstItem="WX6-Nj-WZP" firstAttribute="leading" secondItem="kKs-fg-8lV" secondAttribute="leading" constant="20" id="JLp-hO-x7X"/>
                             <constraint firstItem="ykF-JV-Wed" firstAttribute="top" relation="greaterThanOrEqual" secondItem="dtX-yb-K6G" secondAttribute="bottom" constant="100" id="OOT-OK-ct6"/>
                             <constraint firstItem="dtX-yb-K6G" firstAttribute="trailing" secondItem="D22-EA-cj8" secondAttribute="trailing" id="OPA-Xy-G7g"/>
+                            <constraint firstItem="v7R-Zr-tOu" firstAttribute="top" secondItem="dtX-yb-K6G" secondAttribute="bottom" constant="15" id="SwX-VM-mA1"/>
                             <constraint firstItem="ykF-JV-Wed" firstAttribute="leading" secondItem="kKs-fg-8lV" secondAttribute="leading" constant="20" id="Sz3-9U-JbU"/>
-                            <constraint firstItem="c6Y-Ps-TAb" firstAttribute="top" secondItem="kKs-fg-8lV" secondAttribute="top" constant="100" id="Xml-a8-PyF"/>
+                            <constraint firstItem="c6Y-Ps-TAb" firstAttribute="top" secondItem="kKs-fg-8lV" secondAttribute="top" constant="50" id="Xml-a8-PyF"/>
                             <constraint firstItem="kKs-fg-8lV" firstAttribute="trailing" secondItem="c6Y-Ps-TAb" secondAttribute="trailing" constant="20" id="ZYO-DC-uf2"/>
                             <constraint firstItem="kKs-fg-8lV" firstAttribute="trailing" secondItem="ykF-JV-Wed" secondAttribute="trailing" constant="20" id="aLH-S8-cbJ"/>
                             <constraint firstItem="AFc-gH-3uq" firstAttribute="top" secondItem="lW9-uw-MQ3" secondAttribute="bottom" constant="64" id="aRZ-SI-JTF"/>
                             <constraint firstItem="lW9-uw-MQ3" firstAttribute="leading" secondItem="kKs-fg-8lV" secondAttribute="leading" constant="60" id="dAE-HP-fg6"/>
-                            <constraint firstItem="lW9-uw-MQ3" firstAttribute="top" secondItem="c6Y-Ps-TAb" secondAttribute="bottom" constant="60" id="eXS-6b-4xJ"/>
                             <constraint firstItem="ykF-JV-Wed" firstAttribute="top" secondItem="gMV-hZ-QVP" secondAttribute="bottom" constant="160" id="gFy-OD-OWD"/>
                             <constraint firstItem="AFc-gH-3uq" firstAttribute="leading" secondItem="kKs-fg-8lV" secondAttribute="leading" constant="20" id="gwC-pt-RUZ"/>
+                            <constraint firstItem="lW9-uw-MQ3" firstAttribute="top" secondItem="WX6-Nj-WZP" secondAttribute="bottom" constant="10" id="iQm-DP-UDv"/>
                             <constraint firstItem="dtX-yb-K6G" firstAttribute="top" secondItem="AFc-gH-3uq" secondAttribute="bottom" constant="56" id="jeb-M2-XGo"/>
                             <constraint firstItem="kKs-fg-8lV" firstAttribute="trailing" secondItem="AFc-gH-3uq" secondAttribute="trailing" constant="20" id="oHW-Nl-iq1"/>
                             <constraint firstItem="D22-EA-cj8" firstAttribute="top" secondItem="lW9-uw-MQ3" secondAttribute="bottom" constant="50" id="uHd-Lv-m25"/>
+                            <constraint firstItem="WX6-Nj-WZP" firstAttribute="top" secondItem="c6Y-Ps-TAb" secondAttribute="bottom" constant="-20" id="xrB-58-0BY"/>
+                            <constraint firstItem="v7R-Zr-tOu" firstAttribute="leading" secondItem="kKs-fg-8lV" secondAttribute="leading" constant="20" id="y6i-79-nVX"/>
                             <constraint firstItem="kKs-fg-8lV" firstAttribute="trailing" secondItem="gMV-hZ-QVP" secondAttribute="trailing" constant="15" id="zDH-hu-HNz"/>
                             <constraint firstItem="kKs-fg-8lV" firstAttribute="trailing" secondItem="D22-EA-cj8" secondAttribute="trailing" constant="60" id="zpC-tG-xu5"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addMoreMounthlySpentOutlet" destination="v7R-Zr-tOu" id="RTH-cP-YHP"/>
                         <outlet property="buttonTextOutlet" destination="lTE-F6-tjT" id="udQ-9H-jIu"/>
                         <outlet property="circleImageOutlet" destination="rSC-y8-3A9" id="y9H-6z-1VO"/>
                         <outlet property="circleView" destination="ykF-JV-Wed" id="jim-WP-2p8"/>
                         <outlet property="cirlceButton" destination="lYg-Qn-102" id="2ur-a9-X8e"/>
                         <outlet property="congratulationsMessageOutlet" destination="gMV-hZ-QVP" id="Erg-tg-0UB"/>
+                        <outlet property="errorLabelOutlet" destination="WX6-Nj-WZP" id="Gtg-e4-6OE"/>
                         <outlet property="firstQuestionTextOutlet" destination="c6Y-Ps-TAb" id="X6X-il-OgW"/>
                         <outlet property="firstTextFieldOutlet" destination="lW9-uw-MQ3" id="yMK-zM-YHm"/>
                         <outlet property="secondQuestionTextOutlet" destination="AFc-gH-3uq" id="TJN-1O-GC8"/>
@@ -2594,7 +2615,7 @@ Expenses Tracker for you!</string>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
         <image name="dollarsign.circle" catalog="system" width="128" height="121"/>
         <image name="downloadCirculeOne" width="515" height="516"/>
-        <image name="downloadCirculetwo" width="515" height="516"/>
+        <image name="downloadCirculeZero" width="515" height="516"/>
         <image name="gearshape" catalog="system" width="128" height="121"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="icons8-debit-card-50" width="50" height="50"/>
