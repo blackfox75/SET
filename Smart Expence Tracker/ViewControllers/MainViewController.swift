@@ -6,31 +6,37 @@
 //
 
 import UIKit
+private let bankCard = "BankCardsTableViewCell"
 
 class MainViewController: UIViewController {
     
-    @IBOutlet weak var moneyViewOutlet: UIView!
-    @IBOutlet weak var moneyDisplayOutlet: UILabel!
-    @IBOutlet weak var titileForBankOutlet: UILabel!
     let defaults = UserDefaults.standard
+    let userInfo = User()
+    @IBOutlet weak var mainTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        moneyViewOutlet.layer.cornerRadius = 20
-        titileForBankOutlet.text = defaults.string(forKey: "NameOfDebitCard")
-        moneyDisplayOutlet.text = String(defaults.double(forKey: "MoneyOnDebitcard"))
-    }
-    
-//    @objc func callMethod() {
-//        print("Working!")
-//    }
-    
-    
-    
-    
-    @IBAction func moneyViewClicked(_ sender: Any) {
-        let vc = UIViewController.getFromStoryboard(withId: "YourMoneyViewController") as! YourMoneyViewController
-        navigationController?.pushViewController(vc, animated: true)
+        mainTableView.delegate = self
+        mainTableView.dataSource = self
+        mainTableView.register(UINib(nibName: bankCard, bundle: nil), forCellReuseIdentifier: bankCard)
     }
     
 }
+
+extension MainViewController : UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return defaults.integer(forKey: "CountOfDebitCards")
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: bankCard, for: indexPath) as! BankCardsTableViewCell
+//        cell.bankTitle.text = defaults.string(forKey: "NameOfDebitCard")
+        cell.bankTitle.text = String(userInfo.countOfDebitCards)
+        cell.countOfMoney.text = String(defaults.integer(forKey: "MoneyOnDebitcard"))
+        mainTableView.rowHeight = 120
+        return cell
+    }
+    
+    
+}
+

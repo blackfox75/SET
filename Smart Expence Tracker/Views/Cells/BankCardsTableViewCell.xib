@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BankCardsTableViewCell" rowHeight="113" id="KGk-i7-Jjw" customClass="BankCardsTableViewCell" customModule="Smart_Expence_Tracker" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="312" height="113"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="312" height="113"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Santander" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="khq-AJ-aO9">
+                        <rect key="frame" x="110" y="15" width="92.5" height="23.5"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tBJ-3z-He6">
+                        <rect key="frame" x="15" y="62" width="12" height="17.5"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1543869" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zxa-E5-Q2h">
+                        <rect key="frame" x="117" y="58.5" width="78" height="24"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" red="0.25863483549999999" green="0.59611552950000002" blue="0.69402879480000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="zxa-E5-Q2h" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="5pT-3Y-yA6"/>
+                    <constraint firstItem="tBJ-3z-He6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="9mH-2j-Pa2"/>
+                    <constraint firstItem="zxa-E5-Q2h" firstAttribute="leading" secondItem="tBJ-3z-He6" secondAttribute="trailing" constant="90" id="EOv-ZN-BYZ"/>
+                    <constraint firstItem="zxa-E5-Q2h" firstAttribute="centerY" secondItem="tBJ-3z-He6" secondAttribute="centerY" id="Eqr-KB-PwD"/>
+                    <constraint firstItem="khq-AJ-aO9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="HVi-Jo-JMC"/>
+                    <constraint firstItem="khq-AJ-aO9" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Otr-Ky-ZKD"/>
+                    <constraint firstItem="zxa-E5-Q2h" firstAttribute="top" secondItem="khq-AJ-aO9" secondAttribute="bottom" constant="20" id="SSU-Iv-rOL"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="bankTitle" destination="khq-AJ-aO9" id="CfE-Sx-jDM"/>
+                <outlet property="countOfMoney" destination="zxa-E5-Q2h" id="Zc3-R0-Xcn"/>
+            </connections>
+            <point key="canvasLocation" x="130.43478260869566" y="171.76339285714286"/>
+        </tableViewCell>
+    </objects>
+</document>

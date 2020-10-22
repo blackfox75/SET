@@ -607,72 +607,29 @@ Expenses Tracker for you!</string>
                                     <constraint firstAttribute="width" constant="120" id="XCc-gi-895"/>
                                 </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IlV-I5-Bzu">
-                                <rect key="frame" x="43.666666666666657" y="207" width="288" height="100"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mFk-wD-1t6">
-                                        <rect key="frame" x="20" y="32" width="24" height="36"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Your Money" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="85v-MH-1e6">
-                                        <rect key="frame" x="4" y="3" width="280" height="24"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,000,000.89" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rs4-in-qKG">
-                                        <rect key="frame" x="45" y="32" width="198" height="36"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.070472024379999998" green="0.2549197674" blue="0.30976051090000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="mFk-wD-1t6" firstAttribute="top" secondItem="IlV-I5-Bzu" secondAttribute="top" constant="32" id="3eQ-Sl-WWR"/>
-                                    <constraint firstItem="Rs4-in-qKG" firstAttribute="top" secondItem="85v-MH-1e6" secondAttribute="bottom" constant="5" id="4rd-Bp-rEP"/>
-                                    <constraint firstItem="85v-MH-1e6" firstAttribute="top" secondItem="IlV-I5-Bzu" secondAttribute="top" constant="3" id="54q-6X-Vs9"/>
-                                    <constraint firstItem="85v-MH-1e6" firstAttribute="leading" secondItem="IlV-I5-Bzu" secondAttribute="leading" constant="4" id="7Nj-st-0SF"/>
-                                    <constraint firstItem="Rs4-in-qKG" firstAttribute="centerX" secondItem="IlV-I5-Bzu" secondAttribute="centerX" id="9J6-yC-uJV"/>
-                                    <constraint firstAttribute="trailing" secondItem="Rs4-in-qKG" secondAttribute="trailing" constant="45" id="M4A-pm-FME"/>
-                                    <constraint firstAttribute="bottom" secondItem="Rs4-in-qKG" secondAttribute="bottom" constant="32" id="Rlj-ur-8bu"/>
-                                    <constraint firstItem="mFk-wD-1t6" firstAttribute="leading" relation="lessThanOrEqual" secondItem="IlV-I5-Bzu" secondAttribute="leading" constant="20" id="Ver-10-IKc"/>
-                                    <constraint firstAttribute="trailing" secondItem="85v-MH-1e6" secondAttribute="trailing" constant="4" id="hwU-ep-Ura"/>
-                                    <constraint firstAttribute="bottom" secondItem="mFk-wD-1t6" secondAttribute="bottom" constant="32" id="nSz-31-c7Q"/>
-                                    <constraint firstItem="Rs4-in-qKG" firstAttribute="leading" relation="lessThanOrEqual" secondItem="mFk-wD-1t6" secondAttribute="trailing" constant="1" id="sMb-vv-CLa"/>
-                                    <constraint firstAttribute="width" constant="288" id="ttX-u9-hkI"/>
-                                </constraints>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wsa-34-bX9">
-                                <rect key="frame" x="43.666666666666657" y="207" width="288" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="J8g-uB-Q5K"/>
-                                    <constraint firstAttribute="width" constant="288" id="a0Y-dx-J5e"/>
-                                </constraints>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zW4-Ez-2OY">
+                                <rect key="frame" x="0.0" y="194" width="375" height="535"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
-                                    <action selector="moneyViewClicked:" destination="FT4-km-53T" eventType="touchUpInside" id="FVj-UU-w15"/>
+                                    <outlet property="dataSource" destination="FT4-km-53T" id="MFb-kO-AbF"/>
+                                    <outlet property="delegate" destination="FT4-km-53T" id="6gl-P3-2Ks"/>
                                 </connections>
-                            </button>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kxU-8h-bLA"/>
                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="zW4-Ez-2OY" firstAttribute="leading" secondItem="kxU-8h-bLA" secondAttribute="leading" id="KTj-ty-Jrk"/>
+                            <constraint firstItem="zW4-Ez-2OY" firstAttribute="top" secondItem="y1n-6M-7KM" secondAttribute="bottom" constant="10" id="ODh-JD-hd8"/>
+                            <constraint firstItem="kxU-8h-bLA" firstAttribute="bottom" secondItem="zW4-Ez-2OY" secondAttribute="bottom" id="QED-mL-hM7"/>
                             <constraint firstItem="y1n-6M-7KM" firstAttribute="top" secondItem="kxU-8h-bLA" secondAttribute="top" constant="20" id="XyE-F9-7Bx"/>
-                            <constraint firstItem="IlV-I5-Bzu" firstAttribute="top" secondItem="y1n-6M-7KM" secondAttribute="bottom" constant="23" id="cWi-VW-aeN"/>
-                            <constraint firstItem="wsa-34-bX9" firstAttribute="centerX" secondItem="vEd-5a-MO3" secondAttribute="centerX" id="dvi-2Y-HXz"/>
+                            <constraint firstItem="kxU-8h-bLA" firstAttribute="trailing" secondItem="zW4-Ez-2OY" secondAttribute="trailing" id="mnq-7N-Pn4"/>
                             <constraint firstItem="y1n-6M-7KM" firstAttribute="centerX" secondItem="vEd-5a-MO3" secondAttribute="centerX" id="n6n-Eg-vc0"/>
-                            <constraint firstItem="wsa-34-bX9" firstAttribute="top" secondItem="IlV-I5-Bzu" secondAttribute="top" id="uh9-fr-sEo"/>
-                            <constraint firstItem="IlV-I5-Bzu" firstAttribute="centerX" secondItem="vEd-5a-MO3" secondAttribute="centerX" id="wj8-Hx-XGW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="TMy-i7-5sa"/>
                     <connections>
-                        <outlet property="moneyDisplayOutlet" destination="Rs4-in-qKG" id="8Kn-Ju-faP"/>
-                        <outlet property="moneyViewOutlet" destination="IlV-I5-Bzu" id="npT-jd-FZE"/>
-                        <outlet property="titileForBankOutlet" destination="85v-MH-1e6" id="nW6-Oa-oJR"/>
+                        <outlet property="mainTableView" destination="zW4-Ez-2OY" id="ahW-p6-hq6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="acN-rE-okf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

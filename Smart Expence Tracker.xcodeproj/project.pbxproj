@@ -13,6 +13,8 @@
 		22236B4F25267C6F006488C9 /* ExtraSpentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22236B4D25267C6F006488C9 /* ExtraSpentTableViewCell.xib */; };
 		22236B5525269018006488C9 /* PlanListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22236B5325269018006488C9 /* PlanListTableViewCell.swift */; };
 		22236B5625269018006488C9 /* PlanListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22236B5425269018006488C9 /* PlanListTableViewCell.xib */; };
+		222A8317254224F400BC2FDC /* BankCardsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222A8315254224F400BC2FDC /* BankCardsTableViewCell.swift */; };
+		222A8318254224F400BC2FDC /* BankCardsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 222A8316254224F400BC2FDC /* BankCardsTableViewCell.xib */; };
 		22419C8A25169D72009C237A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22419C8925169D72009C237A /* AppDelegate.swift */; };
 		22419C8C25169D72009C237A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22419C8B25169D72009C237A /* SceneDelegate.swift */; };
 		22419C9125169D72009C237A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22419C8F25169D72009C237A /* Main.storyboard */; };
@@ -57,6 +59,8 @@
 		22236B4D25267C6F006488C9 /* ExtraSpentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExtraSpentTableViewCell.xib; sourceTree = "<group>"; };
 		22236B5325269018006488C9 /* PlanListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanListTableViewCell.swift; sourceTree = "<group>"; };
 		22236B5425269018006488C9 /* PlanListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlanListTableViewCell.xib; sourceTree = "<group>"; };
+		222A8315254224F400BC2FDC /* BankCardsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankCardsTableViewCell.swift; sourceTree = "<group>"; };
+		222A8316254224F400BC2FDC /* BankCardsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BankCardsTableViewCell.xib; sourceTree = "<group>"; };
 		22419C8625169D72009C237A /* Smart Expence Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smart Expence Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22419C8925169D72009C237A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22419C8B25169D72009C237A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -186,6 +190,8 @@
 				22236B4325267565006488C9 /* MounthlySpentTableViewCell.swift */,
 				22236B4C25267C6F006488C9 /* ExtraSpentTableViewCell.swift */,
 				22236B4D25267C6F006488C9 /* ExtraSpentTableViewCell.xib */,
+				222A8315254224F400BC2FDC /* BankCardsTableViewCell.swift */,
+				222A8316254224F400BC2FDC /* BankCardsTableViewCell.xib */,
 				22236B5325269018006488C9 /* PlanListTableViewCell.swift */,
 				22236B5425269018006488C9 /* PlanListTableViewCell.xib */,
 				22236B4425267565006488C9 /* MounthlySpentTableViewCell.xib */,
@@ -315,6 +321,7 @@
 				22419C9325169D73009C237A /* Assets.xcassets in Resources */,
 				22419C9125169D72009C237A /* Main.storyboard in Resources */,
 				22236B5625269018006488C9 /* PlanListTableViewCell.xib in Resources */,
+				222A8318254224F400BC2FDC /* BankCardsTableViewCell.xib in Resources */,
 				22236B4F25267C6F006488C9 /* ExtraSpentTableViewCell.xib in Resources */,
 				22236B4625267565006488C9 /* MounthlySpentTableViewCell.xib in Resources */,
 				22C82E102526593D00851F79 /* JobsTableViewCell.xib in Resources */,
@@ -393,6 +400,7 @@
 				22D54752251FF30C004118CB /* TransactionViewCell.swift in Sources */,
 				22236B4525267565006488C9 /* MounthlySpentTableViewCell.swift in Sources */,
 				2295E58E252A5A1C00D51A91 /* ExtraSpentViewController.swift in Sources */,
+				222A8317254224F400BC2FDC /* BankCardsTableViewCell.swift in Sources */,
 				22236B5525269018006488C9 /* PlanListTableViewCell.swift in Sources */,
 				22D547722523B3F8004118CB /* ChangeDebitCardsViewController.swift in Sources */,
 				22D5476C2522C019004118CB /* ChangeJobsViewController.swift in Sources */,

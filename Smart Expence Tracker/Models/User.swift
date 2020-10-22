@@ -19,7 +19,7 @@ class User {
     var debitCardAmountOfMoney : Int = 0
     var mounthlySpentName : String = ""
     var mounthlySpentSum : Int = 0
-    var mounthlySpentDate : Date = Date(timeIntervalSinceNow: 786)
+    var mounthlySpentDate : Date = Date()
 }
 
 class Job {
