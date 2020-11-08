@@ -607,7 +607,7 @@ Expenses Tracker for you!</string>
                                     <constraint firstAttribute="width" constant="120" id="XCc-gi-895"/>
                                 </constraints>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zW4-Ez-2OY">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="123" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zW4-Ez-2OY">
                                 <rect key="frame" x="0.0" y="194" width="375" height="535"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>

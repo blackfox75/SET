@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		220F109325524D9A007FDADB /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220F109225524D9A007FDADB /* UserDefaults.swift */; };
 		22236B4525267565006488C9 /* MounthlySpentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22236B4325267565006488C9 /* MounthlySpentTableViewCell.swift */; };
 		22236B4625267565006488C9 /* MounthlySpentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22236B4425267565006488C9 /* MounthlySpentTableViewCell.xib */; };
 		22236B4E25267C6F006488C9 /* ExtraSpentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22236B4C25267C6F006488C9 /* ExtraSpentTableViewCell.swift */; };
@@ -49,10 +50,11 @@
 		22D547922523FFF2004118CB /* ChangePlanListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D547912523FFF2004118CB /* ChangePlanListViewController.swift */; };
 		22FCC23D2517D6AC00B69150 /* CollectInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FCC23C2517D6AC00B69150 /* CollectInformationViewController.swift */; };
 		22FCC2402519534600B69150 /* JobsQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FCC23F2519534600B69150 /* JobsQuestionViewController.swift */; };
-		B1C2DEDE058D2ACC34912FC6 /* Pods_Smart_Expence_Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D73D96A3A77F6D8185D17C1E /* Pods_Smart_Expence_Tracker.framework */; };
+		98D485E1689E4C7FC1B3E10C /* Pods_Smart_Expence_Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEB797DD8BE5268D0563DD9B /* Pods_Smart_Expence_Tracker.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		220F109225524D9A007FDADB /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		22236B4325267565006488C9 /* MounthlySpentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MounthlySpentTableViewCell.swift; sourceTree = "<group>"; };
 		22236B4425267565006488C9 /* MounthlySpentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MounthlySpentTableViewCell.xib; sourceTree = "<group>"; };
 		22236B4C25267C6F006488C9 /* ExtraSpentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraSpentTableViewCell.swift; sourceTree = "<group>"; };
@@ -97,9 +99,9 @@
 		22D547912523FFF2004118CB /* ChangePlanListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePlanListViewController.swift; sourceTree = "<group>"; };
 		22FCC23C2517D6AC00B69150 /* CollectInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectInformationViewController.swift; sourceTree = "<group>"; };
 		22FCC23F2519534600B69150 /* JobsQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsQuestionViewController.swift; sourceTree = "<group>"; };
-		5BD4DD6619F9BC73CB61D8AC /* Pods-Smart Expence Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart Expence Tracker.debug.xcconfig"; path = "Target Support Files/Pods-Smart Expence Tracker/Pods-Smart Expence Tracker.debug.xcconfig"; sourceTree = "<group>"; };
-		A62BC6F4DD5D4301B65603B5 /* Pods-Smart Expence Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart Expence Tracker.release.xcconfig"; path = "Target Support Files/Pods-Smart Expence Tracker/Pods-Smart Expence Tracker.release.xcconfig"; sourceTree = "<group>"; };
-		D73D96A3A77F6D8185D17C1E /* Pods_Smart_Expence_Tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smart_Expence_Tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		470B0167BB687ACCF6102742 /* Pods-Smart Expence Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart Expence Tracker.release.xcconfig"; path = "Target Support Files/Pods-Smart Expence Tracker/Pods-Smart Expence Tracker.release.xcconfig"; sourceTree = "<group>"; };
+		C19464A68894E3B5892CEBA9 /* Pods-Smart Expence Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart Expence Tracker.debug.xcconfig"; path = "Target Support Files/Pods-Smart Expence Tracker/Pods-Smart Expence Tracker.debug.xcconfig"; sourceTree = "<group>"; };
+		FEB797DD8BE5268D0563DD9B /* Pods_Smart_Expence_Tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smart_Expence_Tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,28 +109,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1C2DEDE058D2ACC34912FC6 /* Pods_Smart_Expence_Tracker.framework in Frameworks */,
+				98D485E1689E4C7FC1B3E10C /* Pods_Smart_Expence_Tracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0A22326D813B378DECBEE099 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D73D96A3A77F6D8185D17C1E /* Pods_Smart_Expence_Tracker.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		22419C7D25169D72009C237A = {
 			isa = PBXGroup;
 			children = (
 				22419C8825169D72009C237A /* Smart Expence Tracker */,
 				22419C8725169D72009C237A /* Products */,
 				DB4175F75F416C67941A084D /* Pods */,
-				0A22326D813B378DECBEE099 /* Frameworks */,
+				609D1584FD0F650A84299001 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -204,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				226CAFA9253BA545002D773C /* User.swift */,
+				220F109225524D9A007FDADB /* UserDefaults.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -246,11 +241,19 @@
 			path = Registration;
 			sourceTree = "<group>";
 		};
+		609D1584FD0F650A84299001 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FEB797DD8BE5268D0563DD9B /* Pods_Smart_Expence_Tracker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DB4175F75F416C67941A084D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				5BD4DD6619F9BC73CB61D8AC /* Pods-Smart Expence Tracker.debug.xcconfig */,
-				A62BC6F4DD5D4301B65603B5 /* Pods-Smart Expence Tracker.release.xcconfig */,
+				C19464A68894E3B5892CEBA9 /* Pods-Smart Expence Tracker.debug.xcconfig */,
+				470B0167BB687ACCF6102742 /* Pods-Smart Expence Tracker.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -262,12 +265,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 22419C9A25169D73009C237A /* Build configuration list for PBXNativeTarget "Smart Expence Tracker" */;
 			buildPhases = (
-				3A560E8DF256CAEA9CA5C55A /* [CP] Check Pods Manifest.lock */,
+				0B39D334C4A429D49C5A7BF0 /* [CP] Check Pods Manifest.lock */,
 				22419C8225169D72009C237A /* Sources */,
 				22419C8325169D72009C237A /* Frameworks */,
 				22419C8425169D72009C237A /* Resources */,
-				8F2D81B9CE979736E14F210F /* [CP] Embed Pods Frameworks */,
-				E9EB573690C53304B7290A06 /* [CP] Copy Pods Resources */,
+				0D50EB72FD4E86BEB855AB9E /* [CP] Embed Pods Frameworks */,
+				283A848F08E199B28B040910 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -331,7 +334,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3A560E8DF256CAEA9CA5C55A /* [CP] Check Pods Manifest.lock */ = {
+		0B39D334C4A429D49C5A7BF0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -353,7 +356,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8F2D81B9CE979736E14F210F /* [CP] Embed Pods Frameworks */ = {
+		0D50EB72FD4E86BEB855AB9E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -370,7 +373,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Smart Expence Tracker/Pods-Smart Expence Tracker-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E9EB573690C53304B7290A06 /* [CP] Copy Pods Resources */ = {
+		283A848F08E199B28B040910 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -408,6 +411,7 @@
 				22D547842523FA64004118CB /* LanguageViewController.swift in Sources */,
 				22419CA52516B786009C237A /* ChooseOptionsViewController.swift in Sources */,
 				22419CA22516B456009C237A /* WelcomeViewController.swift in Sources */,
+				220F109325524D9A007FDADB /* UserDefaults.swift in Sources */,
 				22D5476225214D61004118CB /* SettingViewController.swift in Sources */,
 				22D547662522B6A1004118CB /* ProfileViewController.swift in Sources */,
 				22FCC23D2517D6AC00B69150 /* CollectInformationViewController.swift in Sources */,
@@ -569,11 +573,12 @@
 		};
 		22419C9B25169D73009C237A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5BD4DD6619F9BC73CB61D8AC /* Pods-Smart Expence Tracker.debug.xcconfig */;
+			baseConfigurationReference = C19464A68894E3B5892CEBA9 /* Pods-Smart Expence Tracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.0;
 				DEVELOPMENT_TEAM = QR78SUHXRC;
 				INFOPLIST_FILE = "Smart Expence Tracker/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -589,11 +594,12 @@
 		};
 		22419C9C25169D73009C237A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A62BC6F4DD5D4301B65603B5 /* Pods-Smart Expence Tracker.release.xcconfig */;
+			baseConfigurationReference = 470B0167BB687ACCF6102742 /* Pods-Smart Expence Tracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.0;
 				DEVELOPMENT_TEAM = QR78SUHXRC;
 				INFOPLIST_FILE = "Smart Expence Tracker/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (

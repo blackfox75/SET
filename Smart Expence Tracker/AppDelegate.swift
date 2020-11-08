@@ -9,6 +9,7 @@ import UIKit
 import Firebase
 import GoogleSignIn
 import FBSDKCoreKit
+//import RealmSwift
 
 @main class AppDelegate: UIResponder, UIApplicationDelegate , GIDSignInDelegate {
 
@@ -18,6 +19,7 @@ import FBSDKCoreKit
         GIDSignIn.sharedInstance()?.delegate = self
         GIDSignIn.sharedInstance()?.clientID = "70917760931-nthr9bkl8069990mum6hhdh19ug2cthe.apps.googleusercontent.com"
         ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
+//        Realm.Configuration.defaultConfiguration = Realm.Configuration(schemaVersion: 1)
         return true
     }
     
