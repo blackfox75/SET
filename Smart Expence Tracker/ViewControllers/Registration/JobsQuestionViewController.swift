@@ -89,7 +89,7 @@ class JobsQuestionViewController: UIViewController { //, UserDefaultsProtocol {
                 firstTextFieldOutlet.text = ""
                 print("CountOfJobs", userInfo.countOfJobs)
                 userStates = UserState.companyName
-                //Check commit
+                
                 state = "companyName"
                 firstQuestionTextOutlet.text = "What your company name?"
                 errorLabelOutlet.isHidden = true
