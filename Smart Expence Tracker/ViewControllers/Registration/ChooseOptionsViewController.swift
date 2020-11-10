@@ -13,16 +13,16 @@ import FBSDKLoginKit
 class ChooseOptionsViewController: UIViewController, LoginButtonDelegate {
     
     //MARK: - Outlets
-
+    
     @IBOutlet weak var googleSignInButtonOutlet: UIButton!
     @IBOutlet weak var appleSignInButton: UIButton!
     
     //MARK: - Actions
     
-  
+    
     @IBAction func googleSignInButton(_ sender: Any) {
-            GIDSignIn.sharedInstance().signIn()
-            
+        GIDSignIn.sharedInstance().signIn()
+        
     }
     
     //MARK: - Life Cycle
@@ -79,15 +79,15 @@ class ChooseOptionsViewController: UIViewController, LoginButtonDelegate {
     func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
         
     }
-
+    
     @objc func didSignIn()  {
-
+        
         // Add your code here to push the new view controller
         let vc = UIViewController.getFromStoryboard(withId: "CollectInformationViewController") as! CollectInformationViewController
-      navigationController?.pushViewController(vc, animated: true)
-
+        navigationController?.pushViewController(vc, animated: true)
+        
     }
-
+    
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
@@ -98,5 +98,5 @@ class ChooseOptionsViewController: UIViewController, LoginButtonDelegate {
         navigationController?.pushViewController(vc, animated: true)
     }
     
-
+    
 }

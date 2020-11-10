@@ -20,45 +20,18 @@ class JobsQuestionViewController: UIViewController { //, UserDefaultsProtocol {
     @IBOutlet weak var cirlceButton: UIButton!
     @IBOutlet weak var errorLabelOutlet: UILabel!
     @IBOutlet weak var addMoreMounthlySpentOutlet: UIButton!
-    let defaults = UserDefaults.standard
-    let userInfo = User()
+//    let defaults = UserDefaults.standard
+    let userInfo = User() // добавляю сюда
     let debitCardInfo = DebitCard()
     let mounthlySpent = MounthlySpent()
     let jobInfo = Job()
-    var masOfUserInfo : [User] = []
+    var masOfUserInfo : [User] = [] // masOfUserInfo.Append.UserInfo 2. userDefaults add masOfUserDefaults
     var masOfDebitCards: [DebitCard] = []
     var userStates : UserState = .countOfJobs
     var state:String = "countOfJobs"
-    var countJobs:Int = 1
+    var countJobs: Int = 1
     var countCards: Int = 1
     private var datePicker : UIDatePicker?
-    
-    
-//    private var dictForUsersDefault = [String: Any?]()
-//
-//    deinit {
-//        dictForUsersDefault.removeAll()
-//    }
-//
-//    //MARK: - Protocol Methods -
-//    func theObject(forKey key: String) -> Any? {
-//        if let object = dictForUsersDefault[key] {
-//            return object
-//        }
-//        return nil
-//    }
-//
-//    func setTheObject(_ object: Any, forKey key: String) {
-//        dictForUsersDefault[key] = object
-//    }
-//
-//    func removeTheObject(forKey key: String) {
-//        dictForUsersDefault.removeValue(forKey: key)
-//    }
-//
-//    func synchronizeAll() {
-//        //none
-//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,7 +57,6 @@ class JobsQuestionViewController: UIViewController { //, UserDefaultsProtocol {
         let doneBtn = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed))
         toolbar.setItems([doneBtn], animated: true)
         thirdTextFieldOutlet.inputAccessoryView = toolbar
-        //new
     }
     
     
@@ -113,13 +85,11 @@ class JobsQuestionViewController: UIViewController { //, UserDefaultsProtocol {
         
         if state == "countOfJobs" {
             if firstTextFieldOutlet.text != "" {
-                print("countOfJobs")
-                defaults.set(firstTextFieldOutlet.text, forKey: "CountOfJobs")
-                defaults.synchronize()
                 userInfo.countOfJobs = Int(firstTextFieldOutlet.text!)!
-                print(firstTextFieldOutlet.text as Any)
                 firstTextFieldOutlet.text = ""
+                print("CountOfJobs", userInfo.countOfJobs)
                 userStates = UserState.companyName
+                
                 state = "companyName"
                 firstQuestionTextOutlet.text = "What your company name?"
                 errorLabelOutlet.isHidden = true
@@ -130,15 +100,12 @@ class JobsQuestionViewController: UIViewController { //, UserDefaultsProtocol {
             }
         } else if ((state == "companyName") && (countJobs <= userInfo.countOfJobs)) {
             if firstTextFieldOutlet.text != "" {
-                print("CompanyName")
-                defaults.set(firstTextFieldOutlet.text, forKey: "CompanyName")
-                defaults.synchronize()
                 jobInfo.name = firstTextFieldOutlet.text!
-                print(firstTextFieldOutlet.text as Any)
+                print("companyName", jobInfo.name)
                 
                 
                 firstTextFieldOutlet.text = ""
-                firstQuestionTextOutlet.text = "What your mounthly salary at \(String(describing: UserDefaults.standard.object(forKey: "CompanyName") as! String)) job?"
+                firstQuestionTextOutlet.text = "What your mounthly salary at \(jobInfo.name) job?"
                 userStates = UserState.mounhtlySalary
                 state = "mounthlySalary"
                 countJobs += 1
@@ -150,12 +117,9 @@ class JobsQuestionViewController: UIViewController { //, UserDefaultsProtocol {
             }
         } else if state == "mounthlySalary" {
             if firstTextFieldOutlet.text != "" {
-                print("MounthlySalary")
-                defaults.set(firstTextFieldOutlet.text, forKey: "mounthlySalary")
-                defaults.synchronize()
                 jobInfo.salary = Int(firstTextFieldOutlet.text!)!
                 
-                print(firstTextFieldOutlet.text as Any)
+                print("mounthlySalary", jobInfo.salary)
                 
                 firstTextFieldOutlet.text = ""
                 if (countJobs <= userInfo.countOfJobs) {
@@ -163,6 +127,9 @@ class JobsQuestionViewController: UIViewController { //, UserDefaultsProtocol {
                     state = "companyName"
                 } else {
                     state = "countOfDebitCards"
+                    //new
+                    userInfo.job.append(jobInfo)
+                    //new
                     firstQuestionTextOutlet.text = "How many debit cards do you have?"
                     circleImageOutlet.image = UIImage.init(named: "downloadCirculeFour")
                 }
@@ -176,11 +143,8 @@ class JobsQuestionViewController: UIViewController { //, UserDefaultsProtocol {
             
         } else if state == "countOfDebitCards" {
             if firstTextFieldOutlet.text != "" {
-                print("CountOfDebitCards")
-                defaults.set(firstTextFieldOutlet.text, forKey: "CountOfDebitCards")
-                defaults.synchronize()
                 userInfo.countOfDebitCards = Int(firstTextFieldOutlet.text!)!
-                print(firstTextFieldOutlet.text as Any)
+                print("countOfDebitCards",userInfo.countOfDebitCards)
                 
                 firstTextFieldOutlet.text = ""
                 userStates = UserState.nameOfDebitCard
@@ -196,17 +160,14 @@ class JobsQuestionViewController: UIViewController { //, UserDefaultsProtocol {
             
         } else if ((state == "nameOfDebitCard") && (countCards <= userInfo.countOfDebitCards)) {
             if firstTextFieldOutlet.text != "" {
-                print("NameOfDebitCard")
                 if let name = firstTextFieldOutlet.text {
-                    defaults.set(name, forKey: "NameOfDebitCard")
-                    defaults.synchronize()
                     debitCardInfo.debitCardName = name
-                    print(name as Any)
+                    
+                    print("nameOfDebitCard",debitCardInfo.debitCardName)
                 }
-                //                usersArray.append(defaults)
                 
                 firstTextFieldOutlet.text = ""
-                firstQuestionTextOutlet.text = "How much money do you have on \(String(describing: UserDefaults.standard.object(forKey: "NameOfDebitCard") as! String)) debit card?"
+                firstQuestionTextOutlet.text = "How much money do you have on \(debitCardInfo.debitCardName) debit card?"
                 userStates = UserState.moneyOnDebitcard
                 state = "moneyOnDebitcard"
                 countCards += 1
@@ -218,16 +179,12 @@ class JobsQuestionViewController: UIViewController { //, UserDefaultsProtocol {
             }
         } else if state == "moneyOnDebitcard" {
             if firstTextFieldOutlet.text != "" {
-                print("MoneyOnDebitcard")
-                defaults.set(Double(firstTextFieldOutlet.text!), forKey: "MoneyOnDebitcard")
-                defaults.synchronize()
+                
                 debitCardInfo.debitCardAmountOfMoney = Int(firstTextFieldOutlet.text!)!
-                print(firstTextFieldOutlet.text as Any)
-                //                usersArray.append(defaults)
-                //NEW
+                print("moneyOnDebitcard", debitCardInfo.debitCardAmountOfMoney)
+                
                 userInfo.debitCard.append(debitCardInfo)
-                //NEW
-                masOfUserInfo.append(userInfo)
+                
                 firstTextFieldOutlet.text = ""
                 if (countCards <= userInfo.countOfDebitCards) {
                     firstQuestionTextOutlet.text = "Name of debit card?"
@@ -252,20 +209,16 @@ class JobsQuestionViewController: UIViewController { //, UserDefaultsProtocol {
         } else if state == "mounthlySpent" {
             if (firstTextFieldOutlet.text != "" && secondTextFieldOutlet.text != "" && thirdTextFieldOutlet.text != "") {
                 print("MounthlySpentName")
-                defaults.set(firstTextFieldOutlet.text, forKey: "MounthlySpentName")
-                defaults.synchronize()
-                defaults.set(secondTextFieldOutlet.text, forKey: "MounthlySpentSum")
-                defaults.synchronize()
-                defaults.set(thirdTextFieldOutlet.text, forKey: "MounthlySpentDate")
-                defaults.synchronize()
                 
                 mounthlySpent.mounthlySpentName = firstTextFieldOutlet.text!
                 mounthlySpent.mounthlySpentSum = Int(secondTextFieldOutlet.text!)!
                 mounthlySpent.mounthlySpentDate = datePicker!.date
                 
-                print(firstTextFieldOutlet.text as Any)
-                print(secondTextFieldOutlet.text as Any)
-                print(thirdTextFieldOutlet.text as Any)
+                print("MPName", mounthlySpent.mounthlySpentName as Any)
+                print("MPSum", mounthlySpent.mounthlySpentSum as Any)
+                print("MPDate", mounthlySpent.mounthlySpentDate as Any)
+                
+                userInfo.mounthlySpent.append(mounthlySpent)
                 
                 congratulationsMessageOutlet.isHidden = false
                 firstQuestionTextOutlet.isHidden = true
@@ -278,26 +231,27 @@ class JobsQuestionViewController: UIViewController { //, UserDefaultsProtocol {
                 circleImageOutlet.image = UIImage.init(named: "DoneCircule")
                 cirlceButton.setTitle("Done", for: .normal)
                 
+                
                 state = "nextController"
             } else {
                 errorLabelOutlet.isHidden = false
                 errorLabelOutlet.text = "Please fill out all information about your mounthly spent"
             }
         } else if state == "nextController" {
-            printAll()
-            userInfo.job.append(jobInfo)
-            userInfo.debitCard.append(debitCardInfo)
-            userInfo.mounthlySpent.append(mounthlySpent)
+//            printAll()
             
             masOfUserInfo.append(userInfo)
+//            userInfo.debitCard.append(debitCardInfo)
+//            masOfDebitCards.append(debitCardInfo)
             
+//            for index in masOfDebitCards {
+//                print(index.debitCardName)
+//            }
+           
             let encoderForUsers = JSONEncoder()
-            if let encoded = try? encoderForUsers.encode(masOfUserInfo) {
-                defaults.set(encoded, forKey: "UserInfoArray")
-                defaults.synchronize()
+            if let encoded = try? encoderForUsers.encode(userInfo.debitCard) {
+                UserDefaults.standard.setValue(encoded, forKey: "UserInfoArray")
             }
-            
-            masOfDebitCards.append(debitCardInfo)
             
             let mainVC = UIViewController.getFromStoryboard(withId: "MainTabBarController") as! MainTabBarController
             navigationController?.pushViewController(mainVC, animated: true)
@@ -311,21 +265,21 @@ class JobsQuestionViewController: UIViewController { //, UserDefaultsProtocol {
         state = "mounthlySpent"
         
         if (firstTextFieldOutlet.text != "" && secondTextFieldOutlet.text != "" && thirdTextFieldOutlet.text != "") {
-            print("MounthlySpentName")
-            defaults.set(firstTextFieldOutlet.text, forKey: "MounthlySpentName")
-            defaults.synchronize()
-            defaults.set(secondTextFieldOutlet.text, forKey: "MounthlySpentSum")
-            defaults.synchronize()
-            defaults.set(thirdTextFieldOutlet.text, forKey: "MounthlySpentDate")
-            defaults.synchronize()
+            print("MounthlySpent")
+            UserDefaults.standard.setValue(firstTextFieldOutlet.text, forKey: "MounthlySpentName")
+            UserDefaults.standard.synchronize()
+            UserDefaults.standard.setValue(secondTextFieldOutlet.text, forKey: "MounthlySpentSum")
+            UserDefaults.standard.synchronize()
+            UserDefaults.standard.setValue(thirdTextFieldOutlet.text, forKey: "MounthlySpentDate")
+            UserDefaults.standard.synchronize()
             
             mounthlySpent.mounthlySpentName = firstTextFieldOutlet.text!
             mounthlySpent.mounthlySpentSum = Int(secondTextFieldOutlet.text!)!
             mounthlySpent.mounthlySpentDate = datePicker!.date
             
-            print(firstTextFieldOutlet.text as Any)
-            print(secondTextFieldOutlet.text as Any)
-            print(thirdTextFieldOutlet.text as Any)
+            print("MPName", mounthlySpent.mounthlySpentName as Any)
+            print("MPSum", mounthlySpent.mounthlySpentSum as Any)
+            print("MPDate", mounthlySpent.mounthlySpentDate as Any)
             
             firstTextFieldOutlet.text = ""
             secondTextFieldOutlet.text = ""
@@ -341,13 +295,13 @@ class JobsQuestionViewController: UIViewController { //, UserDefaultsProtocol {
     
     
     func printAll() {
-        print("countOfJobs - \(defaults.integer(forKey: "CountOfJobs") as Any)")
-        print("companyName - \(defaults.string(forKey: "CompanyName") as Any)")
-        print("mounthlySalary - \(defaults.integer(forKey: "mounthlySalary") as Any)")
-        print("countOfDebitCards - \(defaults.integer(forKey: "CountOfDebitCards") as Any)")
-        print("nameOfDebitCard - \(defaults.value(forKey: "NameOfDebitCard") as Any)")
-        print("moneyOnDebitcard - \(defaults.value(forKey: "MoneyOnDebitcard") as Any)")
-        print("mounthlySpent - \(defaults.integer(forKey: "MounthlySpent") as Any)")
+        print("countOfJobs - \(UserDefaults.standard.integer(forKey: "CountOfJobs") as Any)")
+        print("companyName - \(UserDefaults.standard.string(forKey: "CompanyName") as Any)")
+        print("mounthlySalary - \(UserDefaults.standard.integer(forKey: "mounthlySalary") as Any)")
+        print("countOfDebitCards - \(UserDefaults.standard.integer(forKey: "CountOfDebitCards") as Any)")
+        print("nameOfDebitCard - \(UserDefaults.standard.value(forKey: "NameOfDebitCard") as Any)")
+        print("moneyOnDebitcard - \(UserDefaults.standard.value(forKey: "MoneyOnDebitcard") as Any)")
+        print("mounthlySpent - \(UserDefaults.standard.integer(forKey: "MounthlySpent") as Any)")
     }
     
     

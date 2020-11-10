@@ -26,6 +26,24 @@ class WelcomeViewController: UIViewController {
         signInButton.layer.cornerRadius = 20
         createAccountButton.layer.cornerRadius = 20
         super.viewDidLoad()
+        
+        
+        
+//        var tesatArray = [User]()
+//
+//        var misha = User()
+//        misha.name = "misha"
+//        var robert = User()
+//        robert.name = "Robert"
+//
+//
+//        tesatArray.append(contentsOf:[misha,robert])
+//
+//        UserDefaults.standard.setValue(tesatArray, forKey: "test")
+//
+//        var arrayFromUserDefaults = UserDefaults.standard.array(forKey: "test") as? [User]
+//        print(arrayFromUserDefaults?.first?.name)
+
     }
 
 }
