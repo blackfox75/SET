@@ -20,7 +20,6 @@ class JobsQuestionViewController: UIViewController { //, UserDefaultsProtocol {
     @IBOutlet weak var cirlceButton: UIButton!
     @IBOutlet weak var errorLabelOutlet: UILabel!
     @IBOutlet weak var addMoreMounthlySpentOutlet: UIButton!
-//    let defaults = UserDefaults.standard
     let userInfo = User() // добавляю сюда
     let debitCardInfo = DebitCard()
     let mounthlySpent = MounthlySpent()
