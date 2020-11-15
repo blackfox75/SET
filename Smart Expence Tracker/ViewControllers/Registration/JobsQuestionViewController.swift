@@ -82,7 +82,6 @@ class JobsQuestionViewController: UIViewController { //, UserDefaultsProtocol {
     
     @IBAction func nextButtonClicked(_ sender: Any) {
         
-        
         if state == "countOfJobs" {
             if firstTextFieldOutlet.text != "" {
                 userInfo.countOfJobs = Int(firstTextFieldOutlet.text!)!
@@ -102,8 +101,6 @@ class JobsQuestionViewController: UIViewController { //, UserDefaultsProtocol {
             if firstTextFieldOutlet.text != "" {
                 jobInfo.name = firstTextFieldOutlet.text!
                 print("companyName", jobInfo.name)
-                
-                
                 firstTextFieldOutlet.text = ""
                 firstQuestionTextOutlet.text = "What your mounthly salary at \(jobInfo.name) job?"
                 userStates = UserState.mounhtlySalary
@@ -159,53 +156,66 @@ class JobsQuestionViewController: UIViewController { //, UserDefaultsProtocol {
             
             
         } else if ((state == "nameOfDebitCard") && (countCards <= userInfo.countOfDebitCards)) {
-            if firstTextFieldOutlet.text != "" {
-                if let name = firstTextFieldOutlet.text {
-                    debitCardInfo.debitCardName = name
+            
+            for index in 0...userInfo.countOfDebitCards {
+                
+                if firstTextFieldOutlet.text != "" {
+                    if let name = firstTextFieldOutlet.text {
+                        debitCardInfo.debitCardName = name
+                        
+                        print("nameOfDebitCard",debitCardInfo.debitCardName)
+                    }
                     
-                    print("nameOfDebitCard",debitCardInfo.debitCardName)
-                }
-                
-                firstTextFieldOutlet.text = ""
-                firstQuestionTextOutlet.text = "How much money do you have on \(debitCardInfo.debitCardName) debit card?"
-                userStates = UserState.moneyOnDebitcard
-                state = "moneyOnDebitcard"
-                countCards += 1
-                errorLabelOutlet.isHidden = true
-                circleImageOutlet.image = UIImage.init(named: "downloadCirculeSix")
-            } else {
-                errorLabelOutlet.isHidden = false
-                errorLabelOutlet.text = "Please fill out information about debit card"
-            }
-        } else if state == "moneyOnDebitcard" {
-            if firstTextFieldOutlet.text != "" {
-                
-                debitCardInfo.debitCardAmountOfMoney = Int(firstTextFieldOutlet.text!)!
-                print("moneyOnDebitcard", debitCardInfo.debitCardAmountOfMoney)
-                
-                userInfo.debitCard.append(debitCardInfo)
-                
-                firstTextFieldOutlet.text = ""
-                if (countCards <= userInfo.countOfDebitCards) {
-                    firstQuestionTextOutlet.text = "Name of debit card?"
-                    state = "nameOfDebitCard"
+                    firstTextFieldOutlet.text = ""
+                    firstQuestionTextOutlet.text = "How much money do you have on \(debitCardInfo.debitCardName) debit card?"
+                    userStates = UserState.moneyOnDebitcard
+                    state = "moneyOnDebitcard"
+                    countCards += 1
+                    errorLabelOutlet.isHidden = true
+                    circleImageOutlet.image = UIImage.init(named: "downloadCirculeSix")
                 } else {
-                    state = "mounthlySpent"
-                    firstQuestionTextOutlet.text = "What your mounthly spent?"
-                    secondTextFieldOutlet.isHidden = false
-                    thirdTextFieldOutlet.isHidden = false
-                    
-                    firstTextFieldOutlet.placeholder = "Name"
-                    secondTextFieldOutlet.placeholder = "Price"
-                    thirdTextFieldOutlet.placeholder = "Date of your last payment for this spent"
-                    addMoreMounthlySpentOutlet.isHidden = false
-                    circleImageOutlet.image = UIImage.init(named: "downloadCirculeSeven")
-                    
+                    errorLabelOutlet.isHidden = false
+                    errorLabelOutlet.text = "Please fill out information about debit card"
                 }
-            } else {
-                errorLabelOutlet.isHidden = false
-                errorLabelOutlet.text = "Please fill out information about your money on debit card"
+                
             }
+            
+            
+        } else if state == "moneyOnDebitcard" {
+            
+            for index in 0...userInfo.countOfDebitCards {
+                
+                if firstTextFieldOutlet.text != "" {
+                    debitCardInfo.debitCardAmountOfMoney = Int(firstTextFieldOutlet.text!)!
+                    print("moneyOnDebitcard", debitCardInfo.debitCardAmountOfMoney)
+                    masOfDebitCards.append(debitCardInfo)
+                    masOfDebitCards[index].debitCardName = debitCardInfo.debitCardName
+                    masOfDebitCards[index].debitCardAmountOfMoney = debitCardInfo.debitCardAmountOfMoney
+                    
+                    firstTextFieldOutlet.text = ""
+                    if (countCards <= userInfo.countOfDebitCards) {
+                        firstQuestionTextOutlet.text = "Name of debit card?"
+                        state = "nameOfDebitCard"
+                    } else {
+                        state = "mounthlySpent"
+                        firstQuestionTextOutlet.text = "What your mounthly spent?"
+                        secondTextFieldOutlet.isHidden = false
+                        thirdTextFieldOutlet.isHidden = false
+                        
+                        firstTextFieldOutlet.placeholder = "Name"
+                        secondTextFieldOutlet.placeholder = "Price"
+                        thirdTextFieldOutlet.placeholder = "Date of your last payment for this spent"
+                        addMoreMounthlySpentOutlet.isHidden = false
+                        circleImageOutlet.image = UIImage.init(named: "downloadCirculeSeven")
+                        
+                    }
+                } else {
+                    errorLabelOutlet.isHidden = false
+                    errorLabelOutlet.text = "Please fill out information about your money on debit card"
+                }
+            }
+            
+            
         } else if state == "mounthlySpent" {
             if (firstTextFieldOutlet.text != "" && secondTextFieldOutlet.text != "" && thirdTextFieldOutlet.text != "") {
                 print("MounthlySpentName")
@@ -238,16 +248,16 @@ class JobsQuestionViewController: UIViewController { //, UserDefaultsProtocol {
                 errorLabelOutlet.text = "Please fill out all information about your mounthly spent"
             }
         } else if state == "nextController" {
-//            printAll()
+            //            printAll()
             
             masOfUserInfo.append(userInfo)
-//            userInfo.debitCard.append(debitCardInfo)
-//            masOfDebitCards.append(debitCardInfo)
+            //            userInfo.debitCard.append(debitCardInfo)
+            //            masOfDebitCards.append(debitCardInfo)
             
-//            for index in masOfDebitCards {
-//                print(index.debitCardName)
-//            }
-           
+            //            for index in masOfDebitCards {
+            //                print(index.debitCardName)
+            //            }
+            
             let encoderForUsers = JSONEncoder()
             if let encoded = try? encoderForUsers.encode(userInfo.debitCard) {
                 UserDefaults.standard.setValue(encoded, forKey: "UserInfoArray")

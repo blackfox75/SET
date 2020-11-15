@@ -10,7 +10,7 @@ private let bankCard = "BankCardsTableViewCell"
 
 class MainViewController: UIViewController {
     
-    var info : JobsQuestionViewController = JobsQuestionViewController()
+    var info : JobsQuestionViewController!
     var user : User?
     var job : Job?
     var debitCard : DebitCard?
@@ -34,8 +34,8 @@ class MainViewController: UIViewController {
 extension MainViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 //        return usersArray.count
-        return info.userInfo.countOfJobs
-//        return info.masOfDebitCards.count
+//        return info.userInfo.countOfDebitCards
+        return info.masOfDebitCards.count
         
     }
     
