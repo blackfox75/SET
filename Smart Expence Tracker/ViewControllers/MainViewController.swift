@@ -10,10 +10,10 @@ private let bankCard = "BankCardsTableViewCell"
 
 class MainViewController: UIViewController {
     
-    var info : JobsQuestionViewController!
-    var user : User?
-    var job : Job?
-    var debitCard : DebitCard?
+    var info = JobsQuestionViewController()
+    var user = User()
+    var job = Job()
+    var debitCard = DebitCard()
     var count = 0
     let defaults = UserDefaults.standard
     
@@ -24,8 +24,8 @@ class MainViewController: UIViewController {
         mainTableView.delegate = self
         mainTableView.dataSource = self
         mainTableView.register(UINib(nibName: bankCard, bundle: nil), forCellReuseIdentifier: bankCard)
-        
         mainTableView.reloadData()
+//        info.main = self
 
     }
     
@@ -33,10 +33,8 @@ class MainViewController: UIViewController {
 
 extension MainViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return usersArray.count
 //        return info.userInfo.countOfDebitCards
-        return info.masOfDebitCards.count
-        
+        return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

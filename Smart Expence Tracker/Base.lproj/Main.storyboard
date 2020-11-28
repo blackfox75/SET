@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kZO-gX-mfN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kZO-gX-mfN">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -389,7 +389,7 @@ Answer a few questions, and Smart Expences Tracker will better help you track yo
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TMx-gf-4Wr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2952.1739130434785" y="101.78571428571428"/>
+            <point key="canvasLocation" x="2938" y="101"/>
         </scene>
         <!--Jobs Question View Controller-->
         <scene sceneID="GgP-CS-7or">
@@ -471,7 +471,7 @@ Answer a few questions, and Smart Expences Tracker will better help you track yo
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lW9-uw-MQ3">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lW9-uw-MQ3">
                                 <rect key="frame" x="60" y="254" width="255" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -573,7 +573,7 @@ Expenses Tracker for you!</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dQu-ls-SR5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="Wsj-gH-kC0"/>
             </objects>
-            <point key="canvasLocation" x="3685.5999999999999" y="101.97044334975369"/>
+            <point key="canvasLocation" x="3681" y="101"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KOh-if-DI6">
@@ -2571,7 +2571,7 @@ Expenses Tracker for you!</string>
         <image name="Facebook_logo" width="29" height="29"/>
         <image name="Logo" width="318" height="318"/>
         <image name="add_Icon" width="50" height="50"/>
-        <image name="applelogo" catalog="system" width="128" height="121"/>
+        <image name="applelogo" catalog="system" width="103" height="128"/>
         <image name="back" width="64" height="64"/>
         <image name="background" width="561" height="288"/>
         <image name="calendar" width="80" height="80"/>

@@ -7,7 +7,10 @@
 
 import Foundation
 
-class User : Codable {
+class User : Codable, CustomDebugStringConvertible {
+    var debugDescription: String {
+        return "name - \(name)\nemail - \(email)\ncountOfJobs = \(countOfJobs))"
+        }
     var name : String = ""
     var email : String = ""
     var countOfJobs : Int = 0
