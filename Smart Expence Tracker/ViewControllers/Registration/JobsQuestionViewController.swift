@@ -360,8 +360,8 @@ class JobsQuestionViewController: UIViewController {
     
     private var masOfUserInfo : [User] = [] // masOfUserInfo.Append.UserInfo 2. userDefaults add masOfUserDefaults
     private var userStates : UserState = .countOfJobs
-    
-    lazy private var questionList: [String] = ["How many jobs do you have?","What your company name?","What your mounthly salary at lol job?", "What your company name?", "Name of debit card?", "How much money do you have on lol debit card?", "What your mounthly spent?"]
+    private var jobNameUpdate : String = ""
+    lazy private var questionList: [String] = ["How many jobs do you have?","What your company name?","What your mounthly salary at lol job?", "How much debit cards do you have?", "Name of debit card?", "How much money do you have on lol debit card?", "What your mounthly spent?"]
     private var questionNum: Int = 0 {
         didSet {
             if questionNum < questionList.count {
@@ -420,7 +420,7 @@ class JobsQuestionViewController: UIViewController {
     // MARK: - Actions
     @IBAction func nextButtonClicked(_ sender: Any) {
         questionNum += 1
-        
+        firstTextFieldOutlet.text = ""
     }
     
     
@@ -482,11 +482,12 @@ class JobsQuestionViewController: UIViewController {
     func updateUI() {
             switch currentQuestion {
             case .countOfjobs:
-                userInfo.name = firstTextFieldOutlet.text!
+                userInfo.countOfJobs = Int(firstTextFieldOutlet.text ?? "1") ?? 1
             case .companyName:
                 userInfo.job[0].name = firstTextFieldOutlet.text!
             case .mounthlySalary:
                 userInfo.job[0].salary = Int(firstTextFieldOutlet.text ?? "0")!
+                questionList[questionNum].append("What your mounthly salary at \(userInfo.job[0].name) job?")
             case .countOfDebitCards:
                 userInfo.countOfDebitCards = Int(firstTextFieldOutlet.text ?? "0")!
             case .nameOfDebitCard:
@@ -494,7 +495,9 @@ class JobsQuestionViewController: UIViewController {
             case .moneyOnDebitcard:
                 userInfo.debitCard[0].debitCardAmountOfMoney = Int(firstTextFieldOutlet.text ?? "0")!
             case .mounthlySpent:
-                userInfo.mounthlySpent[0].mounthlySpentSum = Int(firstTextFieldOutlet.text ?? "0")!
+                userInfo.mounthlySpent[0].mounthlySpentName = firstTextFieldOutlet.text!
+                userInfo.mounthlySpent[0].mounthlySpentSum = Int(secondTextFieldOutlet.text ?? "0")!
+//                userInfo.mounthlySpent[0].mounthlySpentDate = Date(from: thirdTextFieldOutlet.text ?? NSDate)
             case .nextController:
                 break
             }
